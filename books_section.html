@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Prof. Muthu Ramachandran — Books</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0A1628;
+  --gold:#C9A84C;
+  --gold-light:#E8C97A;
+  --cream:#FDF8F0;
+  --white:#FFFFFF;
+  --text:#1E293B;
+  --muted:#6B7280;
+  --border:#E5DDD0;
+  --springer:#CC0000;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text)}
+
+/* SECTION HEADER */
+.books-section{padding:80px 40px;max-width:1100px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;color:var(--navy);line-height:1.1;margin-bottom:8px}
+.section-subtitle{color:var(--muted);font-size:16px;font-weight:400;margin-bottom:48px}
+
+/* DISCOUNT BANNER */
+.discount-banner{
+  background:linear-gradient(135deg,var(--navy) 0%,#1a2f52 100%);
+  border-radius:16px;
+  padding:24px 32px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:48px;
+  border:1px solid rgba(201,168,76,0.3);
+  position:relative;
+  overflow:hidden;
+}
+.discount-banner::before{
+  content:'';
+  position:absolute;
+  top:-40px;right:-40px;
+  width:160px;height:160px;
+  background:radial-gradient(circle,rgba(201,168,76,0.15),transparent 70%);
+  border-radius:50%;
+}
+.discount-icon{font-size:36px;flex-shrink:0}
+.discount-text h3{color:var(--gold-light);font-size:18px;font-weight:700;margin-bottom:4px}
+.discount-text p{color:rgba(255,255,255,0.7);font-size:13px;line-height:1.5}
+.discount-code-box{
+  margin-left:auto;
+  background:rgba(201,168,76,0.15);
+  border:2px dashed var(--gold);
+  border-radius:12px;
+  padding:14px 24px;
+  text-align:center;
+  flex-shrink:0;
+  cursor:pointer;
+  transition:all .2s;
+}
+.discount-code-box:hover{background:rgba(201,168,76,0.25);transform:scale(1.02)}
+.discount-code-box .code{font-family:monospace;font-size:22px;font-weight:900;color:var(--gold-light);letter-spacing:3px}
+.discount-code-box .label{font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px}
+.copy-msg{font-size:11px;color:var(--gold);margin-top:4px;height:14px}
+
+/* BOOKS GRID */
+.books-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:700px){.books-grid{grid-template-columns:1fr}.discount-banner{flex-wrap:wrap}.discount-code-box{margin-left:0}}
+
+/* BOOK CARD */
+.book-card{
+  background:var(--white);
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 4px 24px rgba(10,22,40,0.08);
+  transition:transform .25s, box-shadow .25s;
+  display:flex;
+  flex-direction:column;
+}
+.book-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(10,22,40,0.15)}
+
+.book-cover{
+  position:relative;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.book-card:nth-child(1) .book-cover{background:linear-gradient(145deg,#0A1628 0%,#1a3a6e 50%,#0d4f8c 100%)}
+.book-card:nth-child(2) .book-cover{background:linear-gradient(145deg,#1a0a28 0%,#3a1a6e 50%,#4d0d8c 100%)}
+
+.book-cover-art{
+  width:130px;
+  height:170px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-shadow:4px 8px 24px rgba(0,0,0,0.5), -2px 0 8px rgba(0,0,0,0.3);
+  position:relative;
+  overflow:hidden;
+}
+.book-card:nth-child(1) .book-cover-art{background:linear-gradient(160deg,#1e4080,#0d6efd)}
+.book-card:nth-child(2) .book-cover-art{background:linear-gradient(160deg,#2d1b69,#7c3aed)}
+
+.book-cover-art .cover-icon{font-size:40px;margin-bottom:8px}
+.book-cover-art .cover-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.8);text-align:center;text-transform:uppercase;letter-spacing:1px;padding:0 10px}
+.book-cover-art::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:40%;
+  background:linear-gradient(180deg,rgba(255,255,255,0.12),transparent);
+}
+
+.springer-badge{
+  position:absolute;
+  top:12px;right:12px;
+  background:var(--springer);
+  color:white;
+  font-size:10px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:20px;
+  letter-spacing:0.5px;
+}
+.year-badge{
+  position:absolute;
+  bottom:12px;left:12px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(8px);
+  color:white;
+  font-size:11px;
+  font-weight:600;
+  padding:4px 12px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* BOOK INFO */
+.book-info{padding:24px;flex:1;display:flex;flex-direction:column}
+.book-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.book-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.book-subtitle{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:16px;flex:1}
+.book-author{display:flex;align-items:center;gap:8px;margin-bottom:20px}
+.author-avatar{width:28px;height:28px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:11px;font-weight:700}
+.author-name{font-size:12px;font-weight:600;color:var(--text)}
+.author-org{font-size:11px;color:var(--muted)}
+
+.book-actions{display:flex;gap:10px;align-items:center}
+.btn-primary{
+  flex:1;
+  background:var(--navy);
+  color:var(--white);
+  border:none;
+  border-radius:10px;
+  padding:11px 16px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  text-align:center;
+  transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.btn-primary:hover{background:#1a2f52;transform:translateY(-1px)}
+.btn-discount{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);
+  border:none;
+  border-radius:10px;
+  padding:11px 14px;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all .2s;
+}
+.btn-discount:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(201,168,76,0.4)}
+</style>
+</head>
+<body>
+<div class="books-section">
+
+  <div class="section-label">📚 Published Works</div>
+  <h2 class="section-title">Books by Prof. Muthu</h2>
+  <p class="section-subtitle">Springer Nature publications on AI Ethics and Blockchain in Healthcare</p>
+
+  <!-- DISCOUNT BANNER -->
+  <div class="discount-banner">
+    <div class="discount-icon">🎁</div>
+    <div class="discount-text">
+      <h3>Exclusive Reader Discount — 40% Off!</h3>
+      <p>Use code at checkout on Springer Nature. Apply to both books for maximum savings.<br>Click code to copy → paste at Springer checkout.</p>
+    </div>
+    <div class="discount-code-box" onclick="copyCode()">
+      <div class="code">Author40</div>
+      <div class="label">Discount Code</div>
+      <div class="copy-msg" id="copyMsg"></div>
+    </div>
+  </div>
+
+  <!-- BOOKS GRID -->
+  <div class="books-grid">
+
+    <!-- Book 1: AI Ethics -->
+    <div class="book-card">
+      <div class="book-cover">
+        <div class="book-cover-art">
+          <div class="cover-icon">🤖</div>
+          <div class="cover-label">AI Ethics by Design</div>
+        </div>
+        <div class="springer-badge">Springer 2026</div>
+        <div class="year-badge">© 2026 · New Release</div>
+      </div>
+      <div class="book-info">
+        <div class="book-tag">Artificial Intelligence · Ethics</div>
+        <div class="book-title">Engineering Ethics of AI by Design</div>
+        <div class="book-subtitle">Principles, Practices, and Frameworks for Responsible Artificial Intelligence — a comprehensive guide to embedding ethics into AI systems from the ground up.</div>
+        <div class="book-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Prof. Muthu Ramachandran</div>
+            <div class="author-org">Forti5 Technologies, London, UK</div>
+          </div>
+        </div>
+        <div class="book-actions">
+          <a href="https://link.springer.com/book/10.1007/978-981-95-2909-4" target="_blank" class="btn-primary">📖 View on Springer</a>
+          <button class="btn-discount" onclick="copyCode()">Use Author40</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book 2: Blockchain Healthcare -->
+    <div class="book-card">
+      <div class="book-cover">
+        <div class="book-cover-art">
+          <div class="cover-icon">⛓️</div>
+          <div class="cover-label">Blockchain Healthcare</div>
+        </div>
+        <div class="springer-badge">Springer 2025</div>
+        <div class="year-badge">© 2025</div>
+      </div>
+      <div class="book-info">
+        <div class="book-tag">Blockchain · Healthcare</div>
+        <div class="book-title">Blockchain Engineering</div>
+        <div class="book-subtitle">Secure, Sustainable Frameworks for Healthcare Applications — exploring how blockchain technology transforms data security and interoperability in modern healthcare.</div>
+        <div class="book-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Prof. Muthu Ramachandran</div>
+            <div class="author-org">Forti5 Technologies, London, UK</div>
+          </div>
+        </div>
+        <div class="book-actions">
+          <a href="https://link.springer.com/book/10.1007/978-981-96-4360-8" target="_blank" class="btn-primary">📖 View on Springer</a>
+          <button class="btn-discount" onclick="copyCode()">Use Author40</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function copyCode(){
+  navigator.clipboard.writeText('Author40').then(()=>{
+    document.getElementById('copyMsg').textContent='✓ Copied!';
+    setTimeout(()=>{document.getElementById('copyMsg').textContent=''},2000);
+  });
+}
+</script>
+</body>
+</html>
