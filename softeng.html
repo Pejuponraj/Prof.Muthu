@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Software Engineering — QualfyTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="program.css" />
+</head>
+<body>
+  <nav class="nav scrolled"><div class="ni"><a href="index.html" class="nl">Qualfy<span class="nl-accent">Tech</span></a><div class="nr" style="margin-left:auto"><a href="index.html#programs" class="nk">← All Programs</a><span class="nk nk-cta" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Enrol Now</span></div></div></nav>
+
+  <div class="pg-hero" style="--accent:#3B82F6">
+    <div class="pg-hero-inner">
+      <div class="pg-breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="index.html#programs">Programs</a> <span>›</span> AI for Software Engineering</div>
+      <div class="pg-badges"><span class="pg-badge-new">New</span><span class="pg-badge-new">Springer Book</span></div>
+      <h1 class="pg-title">AI for Software<br><em>Engineering</em></h1>
+      <p class="pg-sub">Integrate AI tools into the full software development lifecycle — from AI-assisted coding and automated testing to DevOps and AI-driven architecture design.</p>
+      <div class="pg-meta"><div class="pg-meta-item">💻 Software Engineers</div><div class="pg-meta-item">⏱ 5 Modules</div><div class="pg-meta-item">🎓 3 Cert Levels</div><div class="pg-meta-item">🌐 Online &amp; In-Person</div></div>
+      <button class="hcta" style="background:#3B82F6" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button>
+    </div>
+    <div class="pg-hero-icon">💻</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="pg-layout">
+      <div class="pg-main">
+        <div class="pg-section">
+          <h2 class="pg-section-title">What You'll Learn</h2>
+          <div class="pg-outcomes">
+            <div class="pg-outcome">✦ Use AI copilots effectively throughout the SDLC</div>
+            <div class="pg-outcome">✦ Automate testing, QA and code review with AI</div>
+            <div class="pg-outcome">✦ Integrate AI tools into DevOps and CI/CD pipelines</div>
+            <div class="pg-outcome">✦ Apply AI to requirements, design and architecture</div>
+            <div class="pg-outcome">✦ Understand the risks and limitations of AI-generated code</div>
+            <div class="pg-outcome">✦ Lead AI adoption strategies within engineering teams</div>
+          </div>
+        </div>
+        <div class="pg-section">
+          <h2 class="pg-section-title">Curriculum</h2>
+          <div class="pg-curriculum">
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">1</div><div class="pg-lbody"><div class="pg-lhead"><h3>AI Copilots &amp; Code Generation</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Using GitHub Copilot, Cursor, Claude, and other AI tools for productivity.</p><div class="pg-ldetail"><div class="pg-ltags"><span>GitHub Copilot</span><span>Cursor</span><span>Claude API</span><span>Prompt Design</span></div><div class="pg-handson"><strong>Hands-On</strong> Complete a feature using three different AI coding tools — compare quality and speed.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">2</div><div class="pg-lbody"><div class="pg-lhead"><h3>AI-Powered Testing &amp; Quality Assurance</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Automated test generation, intelligent bug detection, and self-healing test suites.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Test Generation</span><span>Mutation Testing</span><span>Bug Detection</span><span>Self-Healing Tests</span></div><div class="pg-handson"><strong>Hands-On</strong> Generate a full test suite for an existing codebase using AI.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">3</div><div class="pg-lbody"><div class="pg-lhead"><h3>AI in DevOps &amp; CI/CD Pipelines</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Intelligent deployment, anomaly detection in pipelines, and AI-driven operations.</p><div class="pg-ldetail"><div class="pg-ltags"><span>CI/CD</span><span>AIOps</span><span>Monitoring</span><span>Deployment</span></div><div class="pg-handson"><strong>Hands-On</strong> Add AI-powered anomaly detection to a GitHub Actions pipeline.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">4</div><div class="pg-lbody"><div class="pg-lhead"><h3>AI-Assisted Architecture &amp; Design</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Using AI for requirements analysis, system design, and architecture decision records.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Requirements AI</span><span>Architecture Patterns</span><span>Design Review</span><span>ADRs</span></div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#3B82F6,#2563EB)">5</div><div class="pg-lbody"><div class="pg-lhead"><h3>Risks, Ethics &amp; Team Adoption</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Code quality risks, intellectual property, bias in AI-generated code, and team onboarding.</p><div class="pg-ldetail"><div class="pg-ltags"><span>IP &amp; Copyright</span><span>Code Quality</span><span>Team Adoption</span><span>Governance</span></div><div class="pg-handson"><strong>Capstone</strong> Build an AI adoption roadmap for your engineering team.</div></div></div></div>
+          </div>
+        </div>
+        <div class="pg-section">
+          <h2 class="pg-section-title">Pricing &amp; Certification Levels</h2>
+          <div class="pg-tiers">
+            <div class="pg-tier"><div class="pg-tier-lv">Foundation</div><h3>Associate</h3><div class="pg-tier-price">£449 <small>one-time</small></div><div class="pg-tier-dur">Core modules · 6 months</div><ul class="pg-tier-ft"><li>Modules 1–2</li><li>Assessment</li><li>Certificate</li><li>6-month access</li></ul><button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button></div>
+            <div class="pg-tier featured"><div class="pg-tier-pop">Most Popular</div><div class="pg-tier-lv">Professional</div><h3>Practitioner</h3><div class="pg-tier-price">£999 <small>one-time</small></div><div class="pg-tier-dur">All modules · 1 year</div><ul class="pg-tier-ft"><li>All 5 modules</li><li>Labs</li><li>Badge</li><li>1-year access</li></ul><button class="pg-tier-btn pr" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Certified</button></div>
+            <div class="pg-tier"><div class="pg-tier-lv">Expert</div><h3>Master</h3><div class="pg-tier-price">£1,999 <small>one-time</small></div><div class="pg-tier-dur">Full curriculum · Lifetime</div><ul class="pg-tier-ft"><li>Advanced track</li><li>Project</li><li>Mentorship</li><li>Lifetime access</li></ul><button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="pg-sidebar">
+        <div class="pg-sidebar-card"><div class="pg-sidebar-icon">💻</div><h3>AI for Software Engineering</h3><p>Level up every stage of your development process with AI.</p><ul class="pg-sidebar-facts"><li>📖 5 modules</li><li>🎓 3 certification levels</li><li>🖐 Hands-on labs</li><li>📚 Springer textbook</li><li>🌐 Online &amp; in-person</li><li>⚡ Reply within 24 hours</li></ul><button class="hcta" style="width:100%;justify-content:center;margin-top:8px;background:#3B82F6" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button></div>
+        <div class="pg-sidebar-instructor"><img src="images/author.jpg" alt="Professor Muthu Ramachandran" /><div><div class="pg-inst-name">Prof. Muthu Ramachandran</div><div class="pg-inst-creds">PhD · FBCS · SMIEEE</div></div></div>
+      </div>
+    </div>
+    <div class="pg-form-section" id="prog-form">
+      <div class="pg-form-inner">
+        <h2>Apply for AI for Software Engineering</h2><p>Fill in the form and we'll get back to you within 24 hours.</p>
+        <form action="https://formsubmit.co/muthu.ramachandran@forti5.tech" method="POST">
+          <input type="hidden" name="_subject" value="Enquiry: AI for Software Engineering" /><input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="program" value="AI for Software Engineering" /><input type="text" name="_honey" style="display:none" />
+          <div class="pg-form-grid">
+            <div><label>Your Name *</label><input name="name" type="text" placeholder="Jane Smith" required /></div>
+            <div><label>Email Address *</label><input name="email" type="email" placeholder="jane@company.com" required /></div>
+            <div><label>Organisation</label><input name="organisation" type="text" placeholder="Company / University" /></div>
+            <div><label>Organisation Website</label><input name="website" type="text" placeholder="https://" /></div>
+            <div><label>Certification Level *</label><select name="level" required><option value="">Select level...</option><option>Associate — Foundation (£449)</option><option>Practitioner — Professional (£999)</option><option>Master — Expert (£1,999)</option></select></div>
+            <div><label>Preferred Delivery</label><select name="delivery"><option value="">Select...</option><option>Online</option><option>In-Person (UK)</option><option>Hybrid</option></select></div>
+            <div class="pg-form-full"><label>Additional Message</label><textarea name="message" placeholder="Tell us about your goals..."></textarea></div>
+          </div>
+          <button type="submit" class="submit-btn" style="max-width:100%;margin-top:8px">Submit Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"><div class="footer-inner"><div class="footer-logo">Qualfy<span>Tech</span></div><div class="footer-links"><a href="index.html">Home</a><a href="index.html#programs">Programs</a><a href="https://www.forti5.tech" target="_blank">Forti5 Tech</a></div><div class="footer-copy">© 2026 Forti5 Technologies Ltd.</div></div></footer>
+  <script>function pgToggle(c){var o=c.classList.contains("open");document.querySelectorAll(".pg-lc").forEach(function(x){x.classList.remove("open")});if(!o)c.classList.add("open")}</script>
+</body>
+</html>

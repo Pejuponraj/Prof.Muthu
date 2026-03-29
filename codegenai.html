@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Gen AI — QualfyTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="program.css" />
+</head>
+<body>
+  <nav class="nav scrolled"><div class="ni"><a href="index.html" class="nl">Qualfy<span class="nl-accent">Tech</span></a><div class="nr" style="margin-left:auto"><a href="index.html#programs" class="nk">← All Programs</a><span class="nk nk-cta" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Enrol Now</span></div></div></nav>
+
+  <div class="pg-hero" style="--accent:#F97316">
+    <div class="pg-hero-inner">
+      <div class="pg-breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="index.html#programs">Programs</a> <span>›</span> Code Gen AI</div>
+      <div class="pg-badges"><span class="pg-badge-new">New</span></div>
+      <h1 class="pg-title">Code Gen<br><em>AI</em></h1>
+      <p class="pg-sub">Deep-dive into AI-powered code generation, secure coding practices, ethics of AI-assisted development, and building organisational AI coding adoption strategies.</p>
+      <div class="pg-meta"><div class="pg-meta-item">💡 Developers &amp; Tech Leads</div><div class="pg-meta-item">⏱ 5 Modules</div><div class="pg-meta-item">🎓 3 Cert Levels</div><div class="pg-meta-item">🌐 Online &amp; In-Person</div></div>
+      <button class="hcta" style="background:#F97316" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button>
+    </div>
+    <div class="pg-hero-icon">💡</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="pg-layout">
+      <div class="pg-main">
+        <div class="pg-section">
+          <h2 class="pg-section-title">What You'll Learn</h2>
+          <div class="pg-outcomes">
+            <div class="pg-outcome">✦ Master GitHub Copilot, Cursor, and Claude for code generation</div>
+            <div class="pg-outcome">✦ Write effective prompts to maximise code quality</div>
+            <div class="pg-outcome">✦ Apply secure coding practices to AI-generated code</div>
+            <div class="pg-outcome">✦ Review and validate AI-generated output systematically</div>
+            <div class="pg-outcome">✦ Navigate IP, copyright and licensing issues</div>
+            <div class="pg-outcome">✦ Lead organisational adoption of AI coding tools</div>
+          </div>
+        </div>
+        <div class="pg-section">
+          <h2 class="pg-section-title">Curriculum</h2>
+          <div class="pg-curriculum">
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#F97316,#EA580C)">1</div><div class="pg-lbody"><div class="pg-lhead"><h3>The Code Gen AI Landscape</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Overview of available tools, how they work, and where they excel or fail.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Copilot</span><span>Cursor</span><span>Claude</span><span>Gemini Code</span><span>Comparison</span></div><div class="pg-handson"><strong>Hands-On</strong> Benchmark 3 tools on the same coding task — measure speed, quality and correctness.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#F97316,#EA580C)">2</div><div class="pg-lbody"><div class="pg-lhead"><h3>Prompt Engineering for Code</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Crafting effective prompts to generate accurate, maintainable, and idiomatic code.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Prompt Design</span><span>Context Windows</span><span>Iterative Prompting</span><span>Test-Driven Prompts</span></div><div class="pg-handson"><strong>Hands-On</strong> Build a prompt template library for your preferred language/stack.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#F97316,#EA580C)">3</div><div class="pg-lbody"><div class="pg-lhead"><h3>Secure Coding with AI</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Identifying and fixing security vulnerabilities in AI-generated code — OWASP, injection, auth.</p><div class="pg-ldetail"><div class="pg-ltags"><span>OWASP</span><span>SQL Injection</span><span>Auth Flaws</span><span>SAST Tools</span></div><div class="pg-handson"><strong>Hands-On</strong> Security audit an AI-generated REST API — find and fix 5 vulnerabilities.</div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#F97316,#EA580C)">4</div><div class="pg-lbody"><div class="pg-lhead"><h3>Code Review, Quality &amp; IP Ethics</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Systematic review of AI-generated code, copyright implications, and licensing.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Code Review</span><span>IP Law</span><span>Licensing</span><span>Quality Gates</span></div></div></div></div>
+            <div class="pg-lc" onclick="pgToggle(this)"><div class="pg-ln" style="background:linear-gradient(135deg,#F97316,#EA580C)">5</div><div class="pg-lbody"><div class="pg-lhead"><h3>Organisational Adoption &amp; Governance</h3><span class="pg-arrow">▾</span></div><p class="pg-lsub">Rolling out AI coding tools across a team or organisation — policies, training, measurement.</p><div class="pg-ldetail"><div class="pg-ltags"><span>Rollout Strategy</span><span>Policies</span><span>Metrics</span><span>Change Management</span></div><div class="pg-handson"><strong>Capstone</strong> Produce an AI coding tools adoption plan for your organisation.</div></div></div></div>
+          </div>
+        </div>
+        <div class="pg-section">
+          <h2 class="pg-section-title">Pricing &amp; Certification Levels</h2>
+          <div class="pg-tiers">
+            <div class="pg-tier"><div class="pg-tier-lv">Foundation</div><h3>Associate</h3><div class="pg-tier-price">£449 <small>one-time</small></div><div class="pg-tier-dur">Core modules · 6 months</div><ul class="pg-tier-ft"><li>Modules 1–2</li><li>Assessment</li><li>Certificate</li><li>6-month access</li></ul><button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button></div>
+            <div class="pg-tier featured"><div class="pg-tier-pop">Most Popular</div><div class="pg-tier-lv">Professional</div><h3>Practitioner</h3><div class="pg-tier-price">£999 <small>one-time</small></div><div class="pg-tier-dur">All modules · 1 year</div><ul class="pg-tier-ft"><li>All 5 modules</li><li>Platform labs</li><li>Badge</li><li>1-year access</li></ul><button class="pg-tier-btn pr" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Certified</button></div>
+            <div class="pg-tier"><div class="pg-tier-lv">Expert</div><h3>Master</h3><div class="pg-tier-price">£1,999 <small>one-time</small></div><div class="pg-tier-dur">Full curriculum · Lifetime</div><ul class="pg-tier-ft"><li>Advanced track</li><li>Adoption project</li><li>Mentorship</li><li>Lifetime access</li></ul><button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="pg-sidebar">
+        <div class="pg-sidebar-card"><div class="pg-sidebar-icon">💡</div><h3>Code Gen AI</h3><p>Master AI coding tools and lead your team's adoption safely.</p><ul class="pg-sidebar-facts"><li>📖 5 modules</li><li>🎓 3 certification levels</li><li>🖐 Hands-on labs</li><li>🌐 Online &amp; in-person</li><li>⚡ Reply within 24 hours</li></ul><button class="hcta" style="width:100%;justify-content:center;margin-top:8px;background:#F97316" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button></div>
+        <div class="pg-sidebar-instructor"><img src="images/author.jpg" alt="Professor Muthu Ramachandran" /><div><div class="pg-inst-name">Prof. Muthu Ramachandran</div><div class="pg-inst-creds">PhD · FBCS · SMIEEE</div></div></div>
+      </div>
+    </div>
+    <div class="pg-form-section" id="prog-form">
+      <div class="pg-form-inner">
+        <h2>Apply for Code Gen AI</h2><p>Fill in the form and we'll get back to you within 24 hours.</p>
+        <form action="https://formsubmit.co/muthu.ramachandran@forti5.tech" method="POST">
+          <input type="hidden" name="_subject" value="Enquiry: Code Gen AI" /><input type="hidden" name="_captcha" value="false" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="program" value="Code Gen AI" /><input type="text" name="_honey" style="display:none" />
+          <div class="pg-form-grid">
+            <div><label>Your Name *</label><input name="name" type="text" placeholder="Jane Smith" required /></div>
+            <div><label>Email Address *</label><input name="email" type="email" placeholder="jane@company.com" required /></div>
+            <div><label>Organisation</label><input name="organisation" type="text" placeholder="Company / University" /></div>
+            <div><label>Organisation Website</label><input name="website" type="text" placeholder="https://" /></div>
+            <div><label>Certification Level *</label><select name="level" required><option value="">Select level...</option><option>Associate — Foundation (£449)</option><option>Practitioner — Professional (£999)</option><option>Master — Expert (£1,999)</option></select></div>
+            <div><label>Preferred Delivery</label><select name="delivery"><option value="">Select...</option><option>Online</option><option>In-Person (UK)</option><option>Hybrid</option></select></div>
+            <div class="pg-form-full"><label>Additional Message</label><textarea name="message" placeholder="Tell us about your goals..."></textarea></div>
+          </div>
+          <button type="submit" class="submit-btn" style="max-width:100%;margin-top:8px">Submit Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"><div class="footer-inner"><div class="footer-logo">Qualfy<span>Tech</span></div><div class="footer-links"><a href="index.html">Home</a><a href="index.html#programs">Programs</a><a href="https://www.forti5.tech" target="_blank">Forti5 Tech</a></div><div class="footer-copy">© 2026 Forti5 Technologies Ltd.</div></div></footer>
+  <script>function pgToggle(c){var o=c.classList.contains("open");document.querySelectorAll(".pg-lc").forEach(function(x){x.classList.remove("open")});if(!o)c.classList.add("open")}</script>
+</body>
+</html>

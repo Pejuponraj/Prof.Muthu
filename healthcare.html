@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in Healthcare — QualfyTech</title>
+  <meta name="description" content="AI in Healthcare certification for medical professionals. 7-lecture programme covering clinical AI, medical imaging, generative AI, agentic AI, ethics and implementation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="program.css" />
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="ni">
+      <a href="index.html" class="nl">Qualfy<span class="nl-accent">Tech</span></a>
+      <div class="nr" style="margin-left:auto">
+        <a href="index.html#programs" class="nk">← All Programs</a>
+        <span class="nk nk-cta" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Enrol Now</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pg-hero" style="--accent:#00B4D8">
+    <div class="pg-hero-inner">
+      <div class="pg-breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="index.html#programs">Programs</a> <span>›</span> AI in Healthcare</div>
+      <div class="pg-badges">
+        <span class="pg-badge-hot">🔥 Hot</span>
+        <span class="pg-badge-new">7 Lectures</span>
+      </div>
+      <h1 class="pg-title">AI in Healthcare<br><em>for Medical Professionals</em></h1>
+      <p class="pg-sub">Comprehensive workshop and hands-on training — from AI foundations to clinical implementation. Designed for doctors, nurses, healthcare administrators and clinical researchers.</p>
+      <div class="pg-meta">
+        <div class="pg-meta-item">🏥 Medical Professionals</div>
+        <div class="pg-meta-item">⏱ 7 Lectures</div>
+        <div class="pg-meta-item">🎓 3 Cert Levels</div>
+        <div class="pg-meta-item">🌐 Online &amp; In-Person</div>
+      </div>
+      <button class="hcta" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button>
+    </div>
+    <div class="pg-hero-icon">🏥</div>
+  </div>
+
+  <div class="pg-body">
+    <div class="pg-layout">
+
+      <!-- LEFT: CURRICULUM -->
+      <div class="pg-main">
+
+        <div class="pg-section">
+          <h2 class="pg-section-title">What You'll Learn</h2>
+          <div class="pg-outcomes">
+            <div class="pg-outcome">✦ Understand AI and ML foundations in clinical contexts</div>
+            <div class="pg-outcome">✦ Apply generative AI tools to medical documentation and diagnostics</div>
+            <div class="pg-outcome">✦ Design agentic AI systems for clinical workflows</div>
+            <div class="pg-outcome">✦ Navigate AI ethics, GDPR, and NHS regulatory frameworks</div>
+            <div class="pg-outcome">✦ Interpret AI-powered medical imaging outputs</div>
+            <div class="pg-outcome">✦ Lead AI adoption strategies in your organisation</div>
+          </div>
+        </div>
+
+        <div class="pg-section">
+          <h2 class="pg-section-title">Full Curriculum — 7 Lectures</h2>
+          <div class="pg-curriculum">
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">1</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>Introduction to AI &amp; Its Healthcare Revolution</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">Foundations of AI and why it transforms healthcare delivery.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>What is AI?</span><span>History &amp; Evolution</span><span>Machine Learning</span><span>AI Landscape 2025</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Hands-On</strong> Interact with ChatGPT/Claude for medical Q&amp;A scenarios.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">2</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>Machine Learning &amp; Deep Learning for Clinicians</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">ML/DL powering medical imaging, clinical NLP, and predictive analytics.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>Classification</span><span>Computer Vision</span><span>Predictive Analytics</span><span>Neural Networks</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Hands-On</strong> Medical image classification with pre-trained models.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">3</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>Generative AI &amp; LLMs in Clinical Practice</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">Applying large language models to clinical documentation, patient communication and decision support.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>LLMs in Medicine</span><span>Prompt Engineering</span><span>Clinical NLP</span><span>RAG Systems</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Hands-On</strong> Build a clinical Q&amp;A assistant using GPT-4 and medical datasets.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">4</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>Agentic AI &amp; Autonomous Clinical Systems</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">AI agents for automated diagnosis, treatment planning, and monitoring workflows.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>AI Agents</span><span>Multi-Agent Systems</span><span>Clinical Automation</span><span>Decision Support</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Hands-On</strong> Design a multi-agent triage system for A&amp;E pathways.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">5</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>AI Ethics, Governance &amp; Regulation in Healthcare</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">Responsible AI deployment — GDPR, NHS AI guidelines, bias mitigation, and patient safety frameworks.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>GDPR</span><span>NHS Guidelines</span><span>Bias Mitigation</span><span>EU AI Act</span><span>Patient Safety</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">6</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>AI-Powered Medical Imaging &amp; Diagnostics</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">Deep learning for radiology, pathology, ophthalmology, and real-time diagnostic assistance.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>Radiology AI</span><span>Pathology</span><span>Retinal Screening</span><span>FDA/CE Marking</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Hands-On</strong> Run inference on chest X-ray datasets using open-source models.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pg-lc" onclick="pgToggle(this)">
+              <div class="pg-ln" style="background:linear-gradient(135deg,#00B4D8,#0096B7)">7</div>
+              <div class="pg-lbody">
+                <div class="pg-lhead">
+                  <h3>Implementing AI in Your Clinical Environment</h3>
+                  <span class="pg-arrow">▾</span>
+                </div>
+                <p class="pg-lsub">Strategy, change management, procurement, and measuring AI impact in healthcare organisations.</p>
+                <div class="pg-ldetail">
+                  <div class="pg-ltags">
+                    <span>Change Management</span><span>Procurement</span><span>ROI &amp; Outcomes</span><span>Roadmap Planning</span>
+                  </div>
+                  <div class="pg-handson">
+                    <strong>Capstone</strong> Present a personalised AI adoption roadmap for your organisation.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="pg-section">
+          <h2 class="pg-section-title">Pricing &amp; Certification Levels</h2>
+          <div class="pg-tiers">
+            <div class="pg-tier">
+              <div class="pg-tier-lv">Foundation</div>
+              <h3>Associate</h3>
+              <div class="pg-tier-price">£549 <small>one-time</small></div>
+              <div class="pg-tier-dur">Lectures 1–3 · 6 months access</div>
+              <ul class="pg-tier-ft">
+                <li>AI foundations (Lectures 1–3)</li>
+                <li>Online assessment</li>
+                <li>Digital certificate</li>
+                <li>6-month platform access</li>
+              </ul>
+              <button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button>
+            </div>
+            <div class="pg-tier featured">
+              <div class="pg-tier-pop">Most Popular</div>
+              <div class="pg-tier-lv">Professional</div>
+              <h3>Practitioner</h3>
+              <div class="pg-tier-price">£1,199 <small>one-time</small></div>
+              <div class="pg-tier-dur">All 7 Lectures · 1 year access</div>
+              <ul class="pg-tier-ft">
+                <li>All 7 lectures</li>
+                <li>Comprehensive assessment</li>
+                <li>Clinical case studies</li>
+                <li>1-year platform access</li>
+              </ul>
+              <button class="pg-tier-btn pr" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Certified</button>
+            </div>
+            <div class="pg-tier">
+              <div class="pg-tier-lv">Expert</div>
+              <h3>Master</h3>
+              <div class="pg-tier-price">£2,499 <small>one-time</small></div>
+              <div class="pg-tier-dur">Full programme · Lifetime access</div>
+              <ul class="pg-tier-ft">
+                <li>Complete programme</li>
+                <li>Capstone project</li>
+                <li>1-to-1 mentorship</li>
+                <li>Lifetime access</li>
+              </ul>
+              <button class="pg-tier-btn sc" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Get Started</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: STICKY SIDEBAR -->
+      <div class="pg-sidebar">
+        <div class="pg-sidebar-card">
+          <div class="pg-sidebar-icon">🏥</div>
+          <h3>AI in Healthcare</h3>
+          <p>For medical professionals ready to lead AI transformation.</p>
+          <ul class="pg-sidebar-facts">
+            <li>📖 7 lectures</li>
+            <li>🎓 3 certification levels</li>
+            <li>🖐 Hands-on labs every lecture</li>
+            <li>📜 NHS &amp; GDPR compliant content</li>
+            <li>🌐 Online &amp; in-person options</li>
+            <li>⚡ Reply within 24 hours</li>
+          </ul>
+          <button class="hcta" style="width:100%;justify-content:center;margin-top:8px" onclick="document.getElementById('prog-form').scrollIntoView({behavior:'smooth'})">Apply Now →</button>
+        </div>
+        <div class="pg-sidebar-instructor">
+          <img src="images/author.jpg" alt="Professor Muthu Ramachandran" />
+          <div>
+            <div class="pg-inst-name">Prof. Muthu Ramachandran</div>
+            <div class="pg-inst-creds">PhD · FBCS · SMIEEE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ENROL FORM -->
+    <div class="pg-form-section" id="prog-form">
+      <div class="pg-form-inner">
+        <h2>Apply for AI in Healthcare</h2>
+        <p>Fill in the form and we'll get back to you within 24 hours with full programme details and scheduling.</p>
+        <form action="https://formsubmit.co/muthu.ramachandran@forti5.tech" method="POST">
+          <input type="hidden" name="_subject" value="Enquiry: AI in Healthcare" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" />
+          <div class="pg-form-grid">
+            <div><label>Your Name *</label><input name="name" type="text" placeholder="Dr. Jane Smith" required /></div>
+            <div><label>Email Address *</label><input name="email" type="email" placeholder="jane@hospital.nhs.uk" required /></div>
+            <div><label>Organisation</label><input name="organisation" type="text" placeholder="NHS Trust / Hospital" /></div>
+            <div><label>Organisation Website</label><input name="website" type="text" placeholder="https://" /></div>
+            <div>
+              <label>Certification Level *</label>
+              <select name="level" required>
+                <option value="">Select level...</option>
+                <option>Associate — Foundation (£549)</option>
+                <option>Practitioner — Professional (£1,199)</option>
+                <option>Master — Expert (£2,499)</option>
+              </select>
+            </div>
+            <div>
+              <label>Preferred Delivery</label>
+              <select name="delivery">
+                <option value="">Select...</option>
+                <option>Online</option>
+                <option>In-Person (UK)</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+            <div class="pg-form-full"><label>Additional Message</label><textarea name="message" placeholder="Tell us about your goals, team size, or any questions..."></textarea></div>
+          </div>
+          <input type="hidden" name="program" value="AI in Healthcare" />
+          <button type="submit" class="submit-btn" style="max-width:100%;margin-top:8px">Submit Enquiry →</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Qualfy<span>Tech</span></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#programs">Programs</a>
+        <a href="index.html#instructor">Instructor</a>
+        <a href="https://www.forti5.tech" target="_blank">Forti5 Tech</a>
+      </div>
+      <div class="footer-copy">© 2026 Forti5 Technologies Ltd.</div>
+    </div>
+  </footer>
+
+  <script>
+    function pgToggle(card) {
+      var open = card.classList.contains("open");
+      document.querySelectorAll(".pg-lc").forEach(function(c){ c.classList.remove("open"); });
+      if (!open) card.classList.add("open");
+    }
+  </script>
+</body>
+</html>
