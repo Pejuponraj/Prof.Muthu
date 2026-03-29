@@ -4,49 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QualfyTech — AI & Technology Certification Programs</title>
-  <meta name="description" content="Industry-recognised AI & Technology certification programs in Blockchain, AI Ethics, Generative AI, Cybersecurity, and AI in Healthcare — by Professor Muthu Ramachandran." />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="ni">
-      <span class="nl" onclick="sTo('home')">Qualfy<span class="nl-accent">Tech</span></span>
-
+      <span class="nl" onclick="sTo('home')">QualfyTech</span>
       <div class="nc">
         <span class="ncl" onclick="location.href='blockchain.html'">Blockchain Engineering</span>
         <span class="ncl" onclick="location.href='ethics.html'">AI Ethics by Design</span>
         <span class="ncl" onclick="location.href='genai.html'">Generative AI for All <span class="badge bn">New</span></span>
         <span class="ncl" onclick="location.href='cyber.html'">AI for Cybersecurity <span class="badge bn">New</span></span>
-        <span class="ncl" onclick="location.href='healthcare.html'" style="color:var(--hc);font-weight:600">
-          AI in Healthcare <span class="badge bh">Hot</span>
-        </span>
+        <span class="ncl" onclick="location.href='healthcare.html'" style="color:var(--hc);font-weight:600">AI in Healthcare <span class="badge bh">Hot</span></span>
         <span class="ncl" onclick="location.href='softeng.html'">AI for SE <span class="badge bn">New</span></span>
         <span class="ncl" onclick="location.href='codegenai.html'">Code Gen AI <span class="badge bn">New</span></span>
       </div>
-
       <div class="nr">
-        <span class="nk" onclick="sTo('instructor')">Instructor</span>
-        <span class="nk" onclick="sTo('research')">Research</span>
-        <span class="nk nk-cta" onclick="sTo('contact')">Enrol Now</span>
+        <span class="nk" onclick="sTo('instructor')">Author</span>
+        <span class="nk" onclick="sTo('contact')">Contact</span>
       </div>
-
-      <button class="hb" id="hbtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hb" id="hbtn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mm" id="mmenu">
     <div class="mmi" onclick="location.href='blockchain.html'">Blockchain Engineering</div>
     <div class="mmi" onclick="location.href='ethics.html'">AI Ethics by Design</div>
@@ -55,311 +39,104 @@
     <div class="mmi" onclick="location.href='healthcare.html'">AI in Healthcare <span class="badge bh">Hot</span></div>
     <div class="mmi" onclick="location.href='softeng.html'">AI for Software Engineering <span class="badge bn">New</span></div>
     <div class="mmi" onclick="location.href='codegenai.html'">Code Gen AI <span class="badge bn">New</span></div>
-    <div class="mmi" onclick="sTo('instructor');cM()">Instructor</div>
-    <div class="mmi" onclick="sTo('research');cM()">Research</div>
-    <div class="mmi mmi-cta" onclick="sTo('contact');cM()">Enrol Now →</div>
+    <div class="mmi" onclick="sTo('instructor');cM()">Author</div>
+    <div class="mmi" onclick="sTo('contact');cM()">Contact</div>
   </div>
 
-  <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-dots"></div>
     <div class="hi">
       <div class="ht">
-        <div class="hero-tag fin">Industry-Recognised Certifications</div>
-        <h1 class="fin" style="animation-delay:0.1s">Professional <em>AI &amp; Technology</em> Certification Programs</h1>
-        <p class="fin" style="animation-delay:0.2s">
-          Industry-recognised courses in Blockchain, AI Ethics, Generative AI,
-          Cybersecurity, and AI in Healthcare — delivered by leading academics and practitioners.
-        </p>
-        <div class="hero-btns fin" style="animation-delay:0.3s">
-          <button class="hcta" onclick="sTo('programs')">Explore Programs →</button>
-          <button class="hcta-sec" onclick="sTo('contact')">Get in Touch</button>
-        </div>
-
-        <div class="hst fin" style="animation-delay:0.4s">
-          <div class="hst-item">
-            <div class="hsn">7</div>
-            <div class="hsl">Programs</div>
-          </div>
-          <div class="hst-div"></div>
-          <div class="hst-item">
-            <div class="hsn">35+</div>
-            <div class="hsl">Years Experience</div>
-          </div>
-          <div class="hst-div"></div>
-          <div class="hst-item">
-            <div class="hsn">4</div>
-            <div class="hsl">Springer Books</div>
-          </div>
-          <div class="hst-div"></div>
-          <div class="hst-item">
-            <div class="hsn">3</div>
-            <div class="hsl">Cert Levels</div>
-          </div>
+        <h1>Professional <em>AI &amp; Technology</em> Certification Programs</h1>
+        <p>Industry-recognised courses in Blockchain, AI Ethics, Generative AI, Cybersecurity, and AI in Healthcare — delivered by leading academics and practitioners.</p>
+        <button class="hcta" onclick="sTo('programs')">Get Started →</button>
+        <div class="hst">
+          <div><div class="hsn">7</div><div class="hsl">Programs</div></div>
+          <div><div class="hsn">35+</div><div class="hsl">Years Experience</div></div>
+          <div><div class="hsn">4</div><div class="hsl">Springer Books</div></div>
         </div>
       </div>
-
-      <div class="vc fin" id="videoCard" style="animation-delay:0.2s">
+      <div class="vc" id="videoCard">
         <div class="vc-inner">
           <div class="play-btn">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
           </div>
-          <div style="font-weight:600;font-size:1rem;color:#fff">Watch Course Overview</div>
-          <div style="font-size:0.82rem;opacity:0.6;margin-top:4px;color:#fff">Click to play video</div>
+          <div style="font-weight:600;font-size:1rem">Watch Course Overview</div>
+          <div style="font-size:0.82rem;opacity:0.6;margin-top:4px">Click to play video</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-inner">
-      <div class="trust-item">🎓 Academic-grade curriculum</div>
-      <div class="trust-sep">·</div>
-      <div class="trust-item">📚 Springer-published research</div>
-      <div class="trust-sep">·</div>
-      <div class="trust-item">🏅 Industry-recognised certificates</div>
-      <div class="trust-sep">·</div>
-      <div class="trust-item">🌐 Online &amp; in-person delivery</div>
-      <div class="trust-sep">·</div>
-      <div class="trust-item">⚡ Reply within 24 hours</div>
-    </div>
-  </div>
-
-  <!-- PROGRAMS -->
   <section class="programs" id="programs">
     <div class="pi">
-      <span class="sl fin">Programs</span>
-      <h2 class="st fin">Choose Your Program</h2>
-      <p class="ssu fin">Select a certification program to explore the curriculum, levels, and pricing</p>
-
-      <div class="pgrid fin">
-        <div class="pc" onclick="selP(this,'blockchain')">
-          <div class="pci">⛓️</div><div class="pcn">Blockchain Engineering</div>
-        </div>
-        <div class="pc" onclick="selP(this,'ethics')">
-          <div class="pci">🎓</div><div class="pcn">AI Ethics by Design</div>
-        </div>
-        <div class="pc" onclick="selP(this,'genai')">
-          <span class="badge bn">New</span><div class="pci">🤖</div><div class="pcn">Generative AI for All</div>
-        </div>
-        <div class="pc" onclick="selP(this,'cyber')">
-          <span class="badge bn">New</span><div class="pci">🛡️</div><div class="pcn">AI for Cybersecurity</div>
-        </div>
-        <div class="pc active" onclick="selP(this,'healthcare')">
-          <span class="badge bh">Hot</span><div class="pci">🏥</div><div class="pcn">AI in Healthcare</div>
-        </div>
-        <div class="pc" onclick="selP(this,'softeng')">
-          <span class="badge bn">New</span><div class="pci">💻</div><div class="pcn">AI for Software Engineering</div>
-        </div>
-        <div class="pc" onclick="selP(this,'codegenai')">
-          <span class="badge bn">New</span><div class="pci">💡</div><div class="pcn">Code Gen AI</div>
-        </div>
+      <span class="sl">Programs</span>
+      <h2 class="st">Choose Your Program</h2>
+      <p class="ssu">Select a certification program to explore the curriculum, levels, and pricing</p>
+      <div class="pgrid">
+        <div class="pc" onclick="selP(this,'blockchain')"><div class="pci">⛓️</div><div class="pcn">Blockchain Engineering</div></div>
+        <div class="pc" onclick="selP(this,'ethics')"><div class="pci">🎓</div><div class="pcn">AI Ethics by Design</div></div>
+        <div class="pc" onclick="selP(this,'genai')"><span class="badge bn">New</span><div class="pci">🤖</div><div class="pcn">Generative AI for All</div></div>
+        <div class="pc" onclick="selP(this,'cyber')"><span class="badge bn">New</span><div class="pci">🛡️</div><div class="pcn">AI for Cybersecurity</div></div>
+        <div class="pc active" onclick="selP(this,'healthcare')"><span class="badge bh">Hot</span><div class="pci">🏥</div><div class="pcn">AI in Healthcare</div></div>
+        <div class="pc" onclick="selP(this,'softeng')"><span class="badge bn">New</span><div class="pci">💻</div><div class="pcn">AI for Software Engineering</div></div>
+        <div class="pc" onclick="selP(this,'codegenai')"><span class="badge bn">New</span><div class="pci">💡</div><div class="pcn">Code Gen AI</div></div>
       </div>
 
-      <div id="bookCovers" style="margin-top:56px;" class="fin">
-        <h3 class="book-heading">Underpinned by Published Academic Research</h3>
-        <div id="bookRow" class="book-row"></div>
+      <div id="bookCovers" style="margin-top:48px;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--p);text-align:center;margin-bottom:24px;">Underpinned by Published Academic Research</h3>
+        <div id="bookRow" style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px;align-items:flex-end;"></div>
       </div>
-
       <div class="pinfo" id="pinfo"></div>
     </div>
   </section>
 
-  <!-- AI IN HEALTHCARE FULL CURRICULUM -->
   <section class="cd" id="ai-healthcare">
     <div class="cdi">
       <div class="chd fin">
-        <span class="sl">Featured Program</span>
-        <h2>AI in Healthcare <em>for Medical Professionals</em></h2>
-        <p>Comprehensive 7-lecture workshop and hands-on training — from AI foundations to clinical implementation.</p>
+        <span class="sl">New Program</span>
+        <h2>AI in Healthcare for Medical Professionals</h2>
+        <p>Comprehensive workshop and hands-on training — from AI foundations to clinical implementation.</p>
       </div>
-
       <div class="lgrid">
-
         <div class="lc fin" onclick="tL(this)">
           <div class="ln">1</div>
           <div>
-            <h3>Introduction to AI &amp; Its Healthcare Revolution <span class="ti">▾</span></h3>
+            <h3>Introduction to AI and Its Healthcare Revolution <span class="ti">▾</span></h3>
             <div class="lsu">Foundations of AI and why it transforms healthcare delivery.</div>
             <div class="ld">
-              <div class="lt">
-                <span class="ltg">What is AI?</span>
-                <span class="ltg">History &amp; Evolution</span>
-                <span class="ltg">Machine Learning</span>
-                <span class="ltg">AI Landscape 2025</span>
-              </div>
-              <div class="ho">
-                <div><strong>Hands-On</strong>Interact with ChatGPT/Claude for medical Q&amp;A.</div>
-              </div>
+              <div class="lt"><span class="ltg">What is AI?</span><span class="ltg">History &amp; Evolution</span><span class="ltg">Machine Learning</span></div>
+              <div class="ho"><div><strong>Hands-On</strong>Interact with ChatGPT/Claude for medical Q&amp;A.</div></div>
             </div>
           </div>
         </div>
-
         <div class="lc fin" onclick="tL(this)">
           <div class="ln">2</div>
           <div>
             <h3>Machine Learning &amp; Deep Learning for Clinicians <span class="ti">▾</span></h3>
             <div class="lsu">ML/DL powering medical imaging, clinical NLP, and predictive analytics.</div>
             <div class="ld">
-              <div class="lt">
-                <span class="ltg">Classification</span>
-                <span class="ltg">Computer Vision</span>
-                <span class="ltg">Predictive Analytics</span>
-                <span class="ltg">Neural Networks</span>
-              </div>
-              <div class="ho">
-                <div><strong>Hands-On</strong>Medical image classification with pre-trained models.</div>
-              </div>
+              <div class="lt"><span class="ltg">Classification</span><span class="ltg">Computer Vision</span><span class="ltg">Predictive Analytics</span></div>
             </div>
           </div>
         </div>
-
-        <div class="lc fin" onclick="tL(this)">
-          <div class="ln">3</div>
-          <div>
-            <h3>Generative AI &amp; LLMs in Clinical Practice <span class="ti">▾</span></h3>
-            <div class="lsu">Applying large language models to clinical documentation, patient communication, and decision support.</div>
-            <div class="ld">
-              <div class="lt">
-                <span class="ltg">LLMs in Medicine</span>
-                <span class="ltg">Prompt Engineering</span>
-                <span class="ltg">Clinical NLP</span>
-                <span class="ltg">RAG Systems</span>
-              </div>
-              <div class="ho">
-                <div><strong>Hands-On</strong>Build a clinical Q&amp;A assistant using GPT-4 and medical datasets.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lc fin" onclick="tL(this)">
-          <div class="ln">4</div>
-          <div>
-            <h3>Agentic AI &amp; Autonomous Clinical Systems <span class="ti">▾</span></h3>
-            <div class="lsu">AI agents for automated diagnosis, treatment planning, and monitoring workflows.</div>
-            <div class="ld">
-              <div class="lt">
-                <span class="ltg">AI Agents</span>
-                <span class="ltg">Multi-Agent Systems</span>
-                <span class="ltg">Clinical Automation</span>
-                <span class="ltg">Decision Support</span>
-              </div>
-              <div class="ho">
-                <div><strong>Hands-On</strong>Design a multi-agent triage system for A&amp;E pathways.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lc fin" onclick="tL(this)">
-          <div class="ln">5</div>
-          <div>
-            <h3>AI Ethics, Governance &amp; Regulation in Healthcare <span class="ti">▾</span></h3>
-            <div class="lsu">Responsible AI deployment — GDPR, NHS AI guidelines, bias mitigation, and patient safety frameworks.</div>
-            <div class="ld">
-              <div class="lt">
-                <span class="ltg">GDPR &amp; NHS Guidelines</span>
-                <span class="ltg">Bias Mitigation</span>
-                <span class="ltg">EU AI Act</span>
-                <span class="ltg">Patient Safety</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lc fin" onclick="tL(this)">
-          <div class="ln">6</div>
-          <div>
-            <h3>AI-Powered Medical Imaging &amp; Diagnostics <span class="ti">▾</span></h3>
-            <div class="lsu">Deep learning for radiology, pathology, ophthalmology, and real-time diagnostic assistance.</div>
-            <div class="ld">
-              <div class="lt">
-                <span class="ltg">Radiology AI</span>
-                <span class="ltg">Pathology</span>
-                <span class="ltg">Retinal Screening</span>
-                <span class="ltg">FDA/CE Marking</span>
-              </div>
-              <div class="ho">
-                <div><strong>Hands-On</strong>Run inference on chest X-ray datasets using open-source models.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="lc fin" onclick="tL(this)">
-          <div class="ln">7</div>
-          <div>
-            <h3>Implementing AI in Your Clinical Environment <span class="ti">▾</span></h3>
-            <div class="lsu">Strategy, change management, procurement, and measuring AI impact in healthcare organisations.</div>
-            <div class="ld">
-              <div class="lt">
-                <span class="ltg">Change Management</span>
-                <span class="ltg">Procurement</span>
-                <span class="ltg">ROI &amp; Outcomes</span>
-                <span class="ltg">Roadmap Planning</span>
-              </div>
-              <div class="ho">
-                <div><strong>Capstone</strong>Present a personalised AI adoption roadmap for your organisation.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="text-align:center;margin-top:40px">
-        <button class="hcta" onclick="sTo('contact')" style="background:var(--hc)">Apply for This Program →</button>
       </div>
     </div>
   </section>
 
-  <!-- INSTRUCTOR -->
   <section class="ins" id="instructor">
     <div class="insi fin">
-      <div style="text-align:center;margin-bottom:40px">
+      <div style="text-align:center;margin-bottom:32px">
         <span class="sl">Author &amp; Instructor</span>
         <h2 class="st">Course Delivered By</h2>
       </div>
-
       <div class="ic">
         <div style="text-align:center">
-          <img src="images/author.jpg" alt="Professor Muthu Ramachandran" class="iph" />
-          <div class="author-creds-pills">
-            <span class="cpill">PhD</span>
-            <span class="cpill">FBCS</span>
-            <span class="cpill">FHEA</span>
-            <span class="cpill">SMIEEE</span>
-            <span class="cpill">SMACM</span>
-          </div>
+          <div class="author-avatar">MR</div>
         </div>
-
         <div>
           <div class="inm">Professor Muthu Ramachandran</div>
           <div class="icr">BSc, MSc, PhD, FBCS, FHEA, SMIEEE, SMACM</div>
-          <div class="ititle">Cybersecurity, AI &amp; Blockchain Research Consultant · Forti5 Technologies, UK</div>
-          <div class="ibo">
-            Professor Muthu Ramachandran is a distinguished academic and industry consultant with over 35 years of experience spanning AI, Blockchain, and Cybersecurity. As a Fellow of the British Computer Society (FBCS) and Senior Member of both IEEE and ACM, he bridges rigorous academic research with real-world technology leadership. He has authored 4 books published by Springer and Elsevier, with an extensive portfolio of peer-reviewed publications. His work directly informs every certification program offered through QualfyTech.
-          </div>
-
-          <div class="author-stats">
-            <div class="astat">
-              <div class="astat-n">35+</div>
-              <div class="astat-l">Years in Academia &amp; Industry</div>
-            </div>
-            <div class="astat">
-              <div class="astat-n">4</div>
-              <div class="astat-l">Published Books</div>
-            </div>
-            <div class="astat">
-              <div class="astat-n">100+</div>
-              <div class="astat-l">Research Publications</div>
-            </div>
-          </div>
-
+          <div class="ibo">Professor Muthu Ramachandran is a Cybersecurity, AI, and Blockchain Technology &amp; Research Consultant at Forti5 Technologies, UK. With over 35 years of experience and 4 Springer-published books, his research directly informs every QualfyTech certification program.</div>
           <div class="ilks">
             <a href="https://tinyurl.com/muthu-pub" target="_blank" rel="noopener" class="ilk">📚 Publications</a>
             <a href="https://www.amazon.com/author/muthu" target="_blank" rel="noopener" class="ilk">📖 Amazon Books</a>
@@ -370,107 +147,13 @@
     </div>
   </section>
 
-  <!-- RESEARCH -->
-  <section class="research-sec" id="research">
-    <div class="research-inner">
-      <div style="text-align:center;margin-bottom:48px" class="fin">
-        <span class="sl">Academic Foundation</span>
-        <h2 class="st" style="color:#fff">Underpinned by Published Research</h2>
-        <p class="ssu" style="color:rgba(255,255,255,0.6)">Every program is grounded in peer-reviewed research and industry practice</p>
-      </div>
-      <div class="rgrid">
-        <div class="rcard fin">
-          <div class="ricon">🔗</div>
-          <h4>Blockchain Engineering</h4>
-          <p>Distributed ledger technology, smart contracts, and enterprise-grade blockchain architecture for secure systems.</p>
-          <span class="rtag">Springer, 2025</span>
-        </div>
-        <div class="rcard fin">
-          <div class="ricon">🎓</div>
-          <h4>AI Ethics by Design</h4>
-          <p>Governance frameworks, bias mitigation, and responsible AI deployment principles for high-stakes environments.</p>
-          <span class="rtag">Springer, 2025</span>
-        </div>
-        <div class="rcard fin">
-          <div class="ricon">🏥</div>
-          <h4>Novel AI &amp; Data Science</h4>
-          <p>Clinical AI implementation studies, patient safety research, and AI-driven healthcare workflow optimisation.</p>
-          <span class="rtag">Elsevier, 2022</span>
-        </div>
-        <div class="rcard fin">
-          <div class="ricon">💻</div>
-          <h4>Software Engineering in Cloud</h4>
-          <p>AI-assisted software development methodologies, DevOps integration, and scalable cloud-native architectures.</p>
-          <span class="rtag">Springer, 2020</span>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px" class="fin">
-        <a href="https://tinyurl.com/muthu-pub" target="_blank" rel="noopener" class="hcta-sec" style="display:inline-block;padding:12px 28px;border-radius:50px;font-weight:600;font-size:0.9rem">View All Publications →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testi-sec" id="testimonials">
-    <div class="testi-inner">
-      <div style="text-align:center;margin-bottom:48px" class="fin">
-        <span class="sl">What Delegates Say</span>
-        <h2 class="st">Trusted by Professionals</h2>
-      </div>
-      <div class="tgrid">
-        <div class="tcard fin">
-          <div class="tquote">"</div>
-          <p>The AI in Healthcare programme gave me the confidence to lead our NHS Trust's AI adoption. Professor Muthu's ability to bridge academia and clinical reality is remarkable.</p>
-          <div class="tauthor">
-            <div class="tav">DR</div>
-            <div>
-              <div class="tname">Dr. R. Patel</div>
-              <div class="trole">Consultant Physician, NHS Trust</div>
-            </div>
-          </div>
-        </div>
-        <div class="tcard fin">
-          <div class="tquote">"</div>
-          <p>The Blockchain Engineering certification opened doors to projects I never thought possible. The curriculum is rigorous, practical, and genuinely industry-relevant.</p>
-          <div class="tauthor">
-            <div class="tav">SL</div>
-            <div>
-              <div class="tname">Sarah L.</div>
-              <div class="trole">Lead Engineer, FinTech Firm</div>
-            </div>
-          </div>
-        </div>
-        <div class="tcard fin">
-          <div class="tquote">"</div>
-          <p>AI Ethics by Design should be mandatory for every technologist. The EU AI Act module alone saved us months of compliance work. Exceptional depth and clarity.</p>
-          <div class="tauthor">
-            <div class="tav">MK</div>
-            <div>
-              <div class="tname">M. Kowalski</div>
-              <div class="trole">Chief Data Officer, Scale-up</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
   <section class="con" id="contact">
     <div class="coni">
       <div style="text-align:center">
-        <span class="sl" style="background:rgba(0,212,170,0.15);color:var(--a)">Get Started</span>
-        <h2 class="st" style="color:#fff;margin-top:8px">Transform Your Practice with AI</h2>
-        <p class="ssu" style="color:rgba(255,255,255,0.65)">Fill in the form below and we'll get back to you within 24 hours.</p>
+        <span class="sl">Get Started</span>
+        <h2 class="st">Transform Your Practice with AI</h2>
+        <p class="ssu">Fill in the form below and we'll get back to you within 24 hours.</p>
       </div>
-
-      <div class="contact-promises">
-        <div class="cpromise">⚡ Response within 24 hours</div>
-        <div class="cpromise">🏢 Group &amp; enterprise pricing available</div>
-        <div class="cpromise">🌐 Online &amp; in-person delivery</div>
-        <div class="cpromise">🎓 3 certification levels</div>
-      </div>
-
       <div id="formCard" class="form-card-manual">
         <form id="contactForm" action="https://formsubmit.co/muthu.ramachandran@forti5.tech" method="POST">
           <input type="hidden" name="_subject" value="New QualfyTech Course Enquiry" />
@@ -478,29 +161,14 @@
           <input type="hidden" name="_template" value="table" />
           <input type="text" name="_honey" style="display:none" />
           <input type="hidden" name="_next" value="" />
-
           <div class="grid-2">
-            <div>
-              <label>Your Name *</label>
-              <input name="name" type="text" placeholder="Dr. Jane Smith" required />
-            </div>
-            <div>
-              <label>Email Address *</label>
-              <input name="email" type="email" placeholder="jane@hospital.nhs.uk" required />
-            </div>
+            <div><label>Your Name *</label><input name="name" type="text" placeholder="Dr. Jane Smith" required /></div>
+            <div><label>Email Address *</label><input name="email" type="email" placeholder="jane@hospital.nhs.uk" required /></div>
           </div>
-
           <div class="grid-2">
-            <div>
-              <label>Organisation</label>
-              <input name="organisation" type="text" placeholder="NHS Trust / Hospital / University" />
-            </div>
-            <div>
-              <label>Organisation Website</label>
-              <input name="website" type="text" placeholder="https://www.example.org" />
-            </div>
+            <div><label>Organisation</label><input name="organisation" type="text" placeholder="NHS Trust / Hospital / University" /></div>
+            <div><label>Organisation Website</label><input name="website" type="text" placeholder="https://www.example.org" /></div>
           </div>
-
           <div class="grid-2">
             <div>
               <label>Chosen Program *</label>
@@ -525,12 +193,10 @@
               </select>
             </div>
           </div>
-
           <div style="margin-bottom:16px">
             <label>Additional Message</label>
-            <textarea name="message" placeholder="Tell us about your training needs, team size, or any questions..."></textarea>
+            <textarea name="message" placeholder="Tell us about your training needs..."></textarea>
           </div>
-
           <div style="text-align:center">
             <button type="submit" class="submit-btn">Submit Enquiry →</button>
           </div>
@@ -539,19 +205,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logo">Qualfy<span>Tech</span></div>
-      <div class="footer-links">
-        <a href="https://www.forti5.tech" target="_blank" rel="noopener">Forti5 Tech</a>
-        <a href="https://tinyurl.com/muthu-pub" target="_blank" rel="noopener">Publications</a>
-        <a href="https://www.amazon.com/author/muthu" target="_blank" rel="noopener">Books</a>
-        <span onclick="sTo('contact')" style="cursor:pointer">Contact</span>
-      </div>
-      <div class="footer-copy">© 2026 Forti5 Technologies Ltd. All rights reserved.</div>
-    </div>
-  </footer>
+  <footer class="footer">© 2026 Forti5 Technologies Ltd. All rights reserved.</footer>
 
   <button class="sct" id="sctBtn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
