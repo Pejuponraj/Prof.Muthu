@@ -58,31 +58,56 @@ function selP(card, key) {
   }
 }
 
-// Books — CSS placeholders, no images needed
+// Books — with real Springer links and discount code
 var books = [
-  { color: "#0A2540", accent: "#00D4AA", title: "Blockchain Engineering",        sub: "Springer, 2025",  prog: "blockchain" },
-  { color: "#1a0a40", accent: "#8B5CF6", title: "AI Ethics by Design",           sub: "Springer, 2025",  prog: "ethics"     },
-  { color: "#0a2810", accent: "#00D4AA", title: "Novel AI & Data Science",        sub: "Elsevier, 2022",  prog: "healthcare" },
-  { color: "#0a1f40", accent: "#00B4D8", title: "Software Engineering in Cloud",  sub: "Springer, 2020",  prog: "softeng"    }
+  {
+    color: "#0A2540", accent: "#00D4AA",
+    title: "Blockchain Engineering",
+    sub: "Springer, 2025",
+    url: "https://link.springer.com/book/10.1007/978-3-030-12358-1",
+    discount: "Author40"
+  },
+  {
+    color: "#1a0a40", accent: "#8B5CF6",
+    title: "Engineering Ethics of AI by Design",
+    sub: "Springer, 2026 · £12.99 eBook",
+    url: "https://link.springer.com/book/10.1007/978-981-95-2909-4",
+    discount: "Author40"
+  },
+  {
+    color: "#0a2020", accent: "#00B4D8",
+    title: "Blockchain in Healthcare",
+    sub: "Springer, 2025",
+    url: "https://link.springer.com/book/10.1007/978-981-96-4360-8",
+    discount: "Author40"
+  },
+  {
+    color: "#0a1f40", accent: "#F59E0B",
+    title: "Software Engineering in Cloud",
+    sub: "Springer, 2020",
+    url: "https://tinyurl.com/muthu-pub",
+    discount: "Author40"
+  }
 ];
 
 var br = document.getElementById("bookRow");
 if (br) {
   books.forEach(function (b) {
     var d = document.createElement("div");
-    d.style.cssText = "text-align:center;cursor:pointer;transition:transform 0.3s";
+    d.style.cssText = "text-align:center;cursor:pointer;transition:transform 0.3s;max-width:130px;";
     d.onmouseover = function () { this.style.transform = "translateY(-8px)"; };
     d.onmouseout  = function () { this.style.transform = "translateY(0)"; };
-    d.onclick = function () { window.location.href = PAGE_ROUTES[b.prog]; };
+    d.onclick = function () { window.open(b.url, "_blank"); };
     d.innerHTML =
       '<div style="width:100px;height:140px;border-radius:8px;background:' + b.color + ';' +
       'box-shadow:0 6px 24px rgba(0,0,0,0.2);margin:0 auto 10px;display:flex;flex-direction:column;' +
       'align-items:center;justify-content:center;padding:12px;border-left:4px solid ' + b.accent + '">' +
       '<div style="font-size:1.6rem;margin-bottom:8px">📚</div>' +
-      '<div style="font-size:0.6rem;font-weight:700;color:' + b.accent + ';text-align:center;line-height:1.3">' + b.title + '</div>' +
+      '<div style="font-size:0.58rem;font-weight:700;color:' + b.accent + ';text-align:center;line-height:1.3">' + b.title + '</div>' +
       '</div>' +
       '<div style="font-size:0.75rem;font-weight:600;color:var(--p);max-width:110px;line-height:1.3;margin:0 auto">' + b.title + '</div>' +
-      '<div style="font-size:0.68rem;color:var(--m);margin-top:3px">' + b.sub + '</div>';
+      '<div style="font-size:0.68rem;color:var(--m);margin-top:3px">' + b.sub + '</div>' +
+      '<div style="font-size:0.65rem;font-weight:700;color:#E65100;margin-top:4px;background:#FFF3E0;padding:2px 8px;border-radius:20px;display:inline-block">🎟 ' + b.discount + '</div>';
     br.appendChild(d);
   });
 }
