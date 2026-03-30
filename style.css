@@ -159,6 +159,19 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--t);background:va
 .submit-btn{display:inline-block;width:100%;max-width:400px;padding:16px 32px;background:var(--a);color:var(--p);font-weight:700;font-size:1rem;border:none;border-radius:50px;cursor:pointer;font-family:inherit;transition:var(--tr);}
 .submit-btn:hover{background:var(--ah);transform:translateY(-2px);}
 
+/* BOOK BANNER */
+.book-banner{background:linear-gradient(135deg,#1a0a40,#2d1060);border-bottom:1px solid rgba(139,92,246,0.3);padding:16px 24px;}
+.book-banner-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.book-banner-left{display:flex;flex-direction:column;gap:4px;}
+.book-banner-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#a78bfa;}
+.book-banner-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#fff;}
+.book-banner-sub{font-size:0.78rem;color:rgba(255,255,255,0.6);}
+.book-banner-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.book-banner-code{font-size:0.82rem;color:#a78bfa;font-weight:600;}
+.book-banner-code strong{color:#c4b5fd;}
+.book-banner-btn{background:#8B5CF6;color:#fff;padding:10px 22px;border-radius:50px;font-size:0.85rem;font-weight:700;text-decoration:none;transition:var(--tr);white-space:nowrap;}
+.book-banner-btn:hover{background:#7C3AED;transform:translateY(-1px);}
+
 /* JOIN INSTRUCTOR PROGRAM */
 .join-sec{padding:80px 24px;background:linear-gradient(135deg,#0A2540,#0d3156);text-align:center;}
 .join-inner{max-width:700px;margin:0 auto;}
