@@ -136,6 +136,12 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--t);background:va
   box-shadow:var(--sm);
   border:4px solid var(--w);
 }
+.iph{
+  width:160px;height:160px;border-radius:16px;
+  object-fit:cover;object-position:top;
+  box-shadow:var(--sm);border:4px solid var(--w);
+  display:block;margin:0 auto;
+}
 
 .inm{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--p);margin-bottom:4px;margin-top:16px;}
 .icr{font-size:0.78rem;color:var(--m);margin-bottom:12px;}
