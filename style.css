@@ -187,8 +187,8 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--t);background:va
 
 /* ── RESPONSIVE ── */
 
-/* Laptop / large tablet (max 1024px) */
-@media(max-width:1024px){
+/* Laptop / large tablet (max 1280px) */
+@media(max-width:1280px){
   .nc{display:none;}
   .hb{display:flex;}
   .nr{display:none;}
