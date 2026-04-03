@@ -298,21 +298,9 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fin').forEach(el => obs.observe(el));
-    const pData = {
-      blockchain: { name:'Blockchain Engineering', desc:'Comprehensive training in distributed ledger technology, smart contracts, and enterprise blockchain solutions.', tags:['Smart Contracts','DeFi','Hyperledger','Ethereum','Web3'] },
-      ethics:     { name:'AI Ethics by Design', desc:'Principles, frameworks, and practices for building responsible, fair, and transparent AI systems.', tags:['Fairness','Bias Mitigation','GDPR','Explainability','Governance'] },
-      genai:      { name:'Generative AI for All', desc:'Hands-on training in LLMs, prompt engineering, and building GenAI-powered applications.', tags:['LLMs','Prompt Engineering','RAG','ChatGPT','Claude'] },
-      cyber:      { name:'AI for Cybersecurity', desc:'Leverage AI and ML for threat detection, anomaly analysis, and automated incident response.', tags:['Threat Detection','ML Security','SIEM','Zero Trust','Pen Testing'] },
-      healthcare: { name:'AI in Healthcare', desc:'From AI foundations to clinical implementation — designed for medical professionals.', tags:['Medical Imaging','Clinical NLP','Predictive Analytics','NHS AI','Regulation'] },
-      softeng:    { name:'AI for Software Engineering', desc:'Integrate AI tooling into the software development lifecycle — from code generation to testing.', tags:['GitHub Copilot','Code Gen','AI Testing','DevOps AI','LLM APIs'] },
-      codegenai:  { name:'Code Gen AI', desc:'Deep-dive into AI-powered code generation, evaluation, and deployment in production environments.', tags:['Codex','Fine-tuning','Code Review AI','Deployment','Security'] }
-    };
     function selP(el, key) {
       document.querySelectorAll('.pc').forEach(c => c.classList.remove('active'));
       el.classList.add('active');
-      const p = pData[key];
-      const pinfo = document.getElementById('pinfo');
-      pinfo.innerHTML = '<div class="pbox"><h3>' + p.name + '</h3><p>' + p.desc + '</p><div class="ptags">' + p.tags.map(t => '<span class="ptag">' + t + '</span>').join('') + '</div><div style="text-align:center;margin-top:24px"><button class="tbtn pr" onclick="sTo(\'contact\')">Enquire Now</button></div></div>';
-      pinfo.classList.add('show');
+      location.href = key + '.html';
     }
     function tL(el) { el
