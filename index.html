@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QualfyTech — AI & Technology Certification Programs</title>
+  <title>QualfyTech — AI &amp; Technology Certification Programs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -95,7 +95,6 @@
         <div class="pc" onclick="selP(this,'softeng')"><span class="badge bn">New</span><div class="pci">💻</div><div class="pcn">AI for Software Engineering</div></div>
         <div class="pc" onclick="selP(this,'codegenai')"><span class="badge bn">New</span><div class="pci">💡</div><div class="pcn">Code Gen AI</div></div>
       </div>
-
       <div id="bookCovers" style="margin-top:48px;">
         <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--p);text-align:center;margin-bottom:24px;">Underpinned by Published Academic Research</h3>
         <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:24px;align-items:flex-end;">
@@ -181,9 +180,7 @@
         <h2 class="st">Course Delivered By</h2>
       </div>
       <div class="ic">
-        <div style="text-align:center">
-          <div class="author-avatar">MR</div>
-        </div>
+        <div style="text-align:center"><div class="author-avatar">MR</div></div>
         <div>
           <div class="inm">Professor Muthu Ramachandran</div>
           <div class="icr">BSc, MSc, PhD, FBCS, FHEA, SMIEEE, SMACM</div>
@@ -201,8 +198,11 @@
         </div>
         <div>
           <div class="inm">Dr. Ponraj Asirwadam Paulraj</div>
-          <div class="icr">PhD</div>
-          <div class="ibo">Dr. Ponraj Asirwadam Paulraj is an instructor at QualfyTech, contributing expertise in AI and Technology certification programs.</div>
+          <div class="icr">PhD in Mathematics | AI &amp; Topology Researcher</div>
+          <div class="ibo">Dr. Ponraj Asirwadam Paulraj is a researcher at the intersection of advanced mathematics and machine learning, with expertise in Topological Data Analysis, Persistent Homology, and Graph Neural Networks. He brings rigorous mathematical foundations to every QualfyTech certification program.</div>
+          <div class="ilks">
+            <a href="https://tinyurl.com/muthu-pub" target="_blank" rel="noopener" class="ilk">📚 Research</a>
+          </div>
         </div>
       </div>
     </div>
@@ -277,10 +277,31 @@
         <div class="join-perk">📚 Be part of an academic-led platform</div>
         <div class="join-perk">💼 Flexible online &amp; in-person delivery</div>
       </div>
-      <a href="/cdn-cgi/l/email-protection#28455d5c405d065a4945494b4049464c5a4946684e475a5c411d065c4d4b40175b5d4a424d4b5c1561465b5c5a5d4b5c475a08785a474f5a4945086d46595d415a510e4a474c5115604108785a474e4d5b5b475a08655d5c405d040d186c0d18690d186c0d1869610849450841465c4d5a4d5b5c4d4c084146084247414641464f085c404d08795d49444e517c4d4b400861465b5c5a5d4b5c475a08785a474f5a4945060d186c0d18690d186c0d18696649454d120d186c0d1869795d4944414e414b495c4147465b120d186c0d18697b584d4b414944415b495c414746120d186c0d18690d186c0d18697c404946430851475d09" class="join-btn">Apply to Become an Instructor →</a>
+      <a href="mailto:muthu.ramachandran@forti5.tech" class="join-btn">Apply to Become an Instructor →</a>
     </div>
   </section>
 
   <footer class="footer">© 2026 Forti5 Technologies Ltd. All rights reserved.</footer>
 
-  <button class="sct" id="sctBtn" aria-label="Scroll to top" onclick="window.sc
+  <button class="sct" id="sctBtn" aria-label="Scroll to top">↑</button>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+      document.getElementById('sctBtn').classList.toggle('visible', window.scrollY > 300);
+    });
+    function sTo(id) { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }
+    const hbtn = document.getElementById('hbtn');
+    hbtn.addEventListener('click', () => { hbtn.classList.toggle('active'); document.getElementById('mmenu').classList.toggle('open'); });
+    function cM() { hbtn.classList.remove('active'); document.getElementById('mmenu').classList.remove('open'); }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fin').forEach(el => obs.observe(el));
+    function selP(el, key) { document.querySelectorAll('.pc').forEach(c => c.classList.remove('active')); el.classList.add('active'); }
+    function tL(el) { el.classList.toggle('open'); }
+    document.getElementById('sctBtn').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+
+</body>
+</html>
