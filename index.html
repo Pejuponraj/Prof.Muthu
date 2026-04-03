@@ -14,13 +14,18 @@
     <div class="ni">
       <span class="nl" onclick="sTo('home')">QualfyTech</span>
       <div class="nc">
-        <span class="ncl" onclick="location.href='blockchain.html'">Blockchain Engineering</span>
-        <span class="ncl" onclick="location.href='ethics.html'">AI Ethics by Design</span>
-        <span class="ncl" onclick="location.href='genai.html'">Generative AI for All <span class="badge bn">New</span></span>
-        <span class="ncl" onclick="location.href='cyber.html'">AI for Cybersecurity <span class="badge bn">New</span></span>
-        <span class="ncl" onclick="location.href='healthcare.html'" style="color:var(--hc);font-weight:600">AI in Healthcare <span class="badge bh">Hot</span></span>
-        <span class="ncl" onclick="location.href='softeng.html'">AI for SE <span class="badge bn">New</span></span>
-        <span class="ncl" onclick="location.href='codegenai.html'">Code Gen AI <span class="badge bn">New</span></span>
+        <div class="nd">
+          <span class="ncl">Courses ▾</span>
+          <div class="ndrop">
+            <a href="blockchain.html">⛓️ Blockchain Engineering</a>
+            <a href="ethics.html">🎓 AI Ethics by Design</a>
+            <a href="genai.html">🤖 Generative AI for All <span class="badge bn">New</span></a>
+            <a href="cyber.html">🛡️ AI for Cybersecurity <span class="badge bn">New</span></a>
+            <a href="healthcare.html" style="color:var(--hc);font-weight:600">🏥 AI in Healthcare <span class="badge bh">Hot</span></a>
+            <a href="softeng.html">💻 AI for SE <span class="badge bn">New</span></a>
+            <a href="codegenai.html">💡 Code Gen AI <span class="badge bn">New</span></a>
+          </div>
+        </div>
       </div>
       <div class="nr">
         <span class="nk" onclick="sTo('instructor')">Author</span>
@@ -270,12 +275,12 @@
         <div class="join-perk">📚 Be part of an academic-led platform</div>
         <div class="join-perk">💼 Flexible online &amp; in-person delivery</div>
       </div>
-      <a href="mailto:muthu.ramachandran@forti5.tech" class="join-btn">Apply to Become an Instructor →</a>
+      <a href="/cdn-cgi/l/email-protection#69041c1d011c471b0804080a0108070d1b0807290f061b1d005c471d0c0a01" class="join-btn">Apply to Become an Instructor →</a>
     </div>
   </section>
   <footer class="footer">© 2026 Forti5 Technologies Ltd. All rights reserved.</footer>
   <button class="sct" id="sctBtn" aria-label="Scroll to top">↑</button>
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     window.addEventListener('scroll', () => {
       document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
       document.getElementById('sctBtn').classList.toggle('visible', window.scrollY > 300);
@@ -289,8 +294,4 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fin').forEach(el => obs.observe(el));
     function selP(el, key) { location.href = key + '.html'; }
-    function tL(el) { el.classList.toggle('open'); }
-    document.getElementById('sctBtn').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  </script>
-</body>
-</html>
+    function tL(el) { e
