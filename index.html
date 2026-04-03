@@ -179,12 +179,12 @@
     </div>
   </section>
   <section class="ins" id="instructor">
-    <div class="insi fin">
+    <div class="insi">
       <div style="text-align:center;margin-bottom:32px">
         <span class="sl">Author &amp; Instructor</span>
         <h2 class="st">Course Delivered By</h2>
       </div>
-      <div class="ic">
+      <div class="ic fin">
         <div style="text-align:center">
           <div class="author-avatar">MR</div>
         </div>
@@ -199,7 +199,7 @@
           </div>
         </div>
       </div>
-      <div class="ic" style="margin-top:24px">
+      <div class="ic fin" style="margin-top:24px">
         <div style="text-align:center">
           <img src="ponraj.jpg" alt="Dr. Ponraj Asirwadam Paulraj" class="iph" />
         </div>
@@ -298,7 +298,7 @@
     function cM() { hbtn.classList.remove('active'); document.getElementById('mmenu').classList.remove('open'); }
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.fin').forEach(el => obs.observe(el));
     function selP(el, key) { location.href = key + '.html'; }
     function tL(el) { e
