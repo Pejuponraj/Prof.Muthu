@@ -27,12 +27,19 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--t);background:va
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--b);transition:var(--tr);}
 .nav.scrolled{box-shadow:var(--sm);}
-.ni{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:8px;}
-.nl{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--p);cursor:pointer;white-space:nowrap;}
-.nc{display:flex;align-items:center;gap:2px;margin-left:24px;}
+.ni{max-width:1280px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:68px;gap:4px;}
+.nl{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;color:var(--p);cursor:pointer;white-space:nowrap;}
+.nc{display:flex;align-items:center;gap:0;margin-left:8px;}
 .ncl,.nk,.mmi{cursor:pointer;}
-.ncl{padding:8px 14px;font-size:0.82rem;font-weight:500;color:var(--m);border-radius:8px;transition:var(--tr);white-space:nowrap;}
+.ncl{padding:6px 8px;font-size:0.74rem;font-weight:500;color:var(--m);border-radius:8px;transition:var(--tr);white-space:nowrap;}
 .ncl:hover{color:var(--p);background:var(--sf);}
+
+/* NAV DROPDOWN */
+.nd{position:relative;}
+.nd:hover .ndrop{display:block;}
+.ndrop{display:none;position:absolute;top:100%;left:0;background:var(--w);border:1px solid var(--b);border-radius:var(--r);box-shadow:var(--sl2);min-width:220px;z-index:2000;padding:8px 0;}
+.ndrop a{display:block;padding:10px 18px;font-size:0.82rem;font-weight:500;color:var(--m);text-decoration:none;transition:var(--tr);white-space:nowrap;}
+.ndrop a:hover{background:var(--sf);color:var(--p);}
 .badge{display:inline-block;padding:1px 6px;font-size:0.6rem;font-weight:700;text-transform:uppercase;border-radius:4px;margin-left:4px;vertical-align:middle;}
 .bn{background:#E8F5E9;color:#2E7D32;}
 .bh{background:#FFF3E0;color:#E65100;}
@@ -187,8 +194,8 @@ body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--t);background:va
 
 /* ── RESPONSIVE ── */
 
-/* Laptop / large tablet (max 1280px) */
-@media(max-width:1280px){
+/* Laptop / large tablet (max 1400px) */
+@media(max-width:1400px){
   .nc{display:none;}
   .hb{display:flex;}
   .nr{display:none;}
