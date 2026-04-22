@@ -8,108 +8,431 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    .rp-hero{padding:100px 24px 60px;background:linear-gradient(160deg,var(--p) 0%,#0d3156 60%,#0f3d6b 100%);position:relative;overflow:hidden;}
-    .rp-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--sf),transparent);}
-    .rp-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:180px 1fr;gap:40px;align-items:center;}
-    .rp-photo{width:160px;height:160px;border-radius:16px;object-fit:cover;object-position:top;border:4px solid rgba(255,255,255,0.2);box-shadow:0 8px 32px rgba(0,0,0,0.3);}
-    .rp-photo-placeholder{width:160px;height:160px;border-radius:16px;background:linear-gradient(135deg,var(--hc),var(--hcd));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:#fff;border:4px solid rgba(255,255,255,0.2);}
-    .rp-name{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:#fff;margin-bottom:8px;}
-    .rp-title{font-size:1rem;color:var(--a);font-weight:600;margin-bottom:12px;}
-    .rp-creds{font-size:0.85rem;color:rgba(255,255,255,0.65);margin-bottom:20px;}
-    .rp-links{display:flex;gap:12px;flex-wrap:wrap;}
-    .rp-link{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.82rem;font-weight:600;text-decoration:none;border-radius:50px;transition:0.2s;}
-    .rp-link:hover{background:rgba(255,255,255,0.2);}
+    :root{
+      --rp-primary:#0b2545;
+      --rp-primary-2:#123b68;
+      --rp-accent:#00b4d8;
+      --rp-accent-2:#00d4aa;
+      --rp-bg:#f7fafc;
+      --rp-card:#ffffff;
+      --rp-border:#dbe7f3;
+      --rp-text:#1f2937;
+      --rp-muted:#64748b;
+      --rp-shadow:0 10px 30px rgba(11,37,69,0.08);
+      --rp-shadow-sm:0 4px 14px rgba(11,37,69,0.06);
+    }
 
-    .rp-body{background:var(--sf);padding:60px 24px;}
-    .rp-inner{max-width:1100px;margin:0 auto;}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'DM Sans',sans-serif;
+      color:var(--rp-text);
+      background:var(--rp-bg);
+      line-height:1.65;
+    }
 
-    .rp-interests{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;}
-    .rp-interest{background:rgba(0,180,216,0.1);color:var(--hcd);border:1px solid rgba(0,180,216,0.2);font-size:0.82rem;font-weight:500;padding:6px 16px;border-radius:50px;}
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#ffffffee;
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--rp-border);
+      box-shadow:var(--rp-shadow-sm);
+    }
+    .ni{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 24px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .nl{
+      font-weight:800;
+      color:var(--rp-primary);
+      font-size:1.05rem;
+    }
+    .nr{
+      margin-left:auto;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .nk{
+      color:var(--rp-primary);
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.92rem;
+      padding:8px 14px;
+      border-radius:999px;
+    }
+    .nk.cta{
+      background:var(--rp-accent);
+      color:#fff;
+    }
 
-    .rp-section{margin-bottom:56px;}
-    .rp-section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--p);margin-bottom:8px;padding-bottom:12px;border-bottom:2px solid var(--b);}
+    .rp-hero{
+      padding:90px 24px 60px;
+      background:linear-gradient(160deg,var(--rp-primary) 0%, var(--rp-primary-2) 58%, #0e4b82 100%);
+      position:relative;
+      overflow:hidden;
+    }
+    .rp-hero::after{
+      content:'';
+      position:absolute;
+      inset:auto 0 0 0;
+      height:90px;
+      background:linear-gradient(to top,var(--rp-bg),transparent);
+    }
+    .rp-hero-inner{
+      max-width:1100px;
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .rp-photo{
+      width:160px;
+      height:160px;
+      border-radius:18px;
+      object-fit:cover;
+      object-position:top;
+      border:4px solid rgba(255,255,255,0.18);
+      box-shadow:0 12px 34px rgba(0,0,0,0.28);
+      background:#fff;
+    }
+    .rp-photo-placeholder{
+      width:160px;
+      height:160px;
+      border-radius:18px;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      font-family:'Playfair Display',serif;
+      font-size:3rem;
+      font-weight:800;
+      color:#fff;
+      background:linear-gradient(135deg,var(--rp-accent),var(--rp-accent-2));
+      border:4px solid rgba(255,255,255,0.18);
+      box-shadow:0 12px 34px rgba(0,0,0,0.28);
+    }
+    .rp-name{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,3.6vw,3rem);
+      line-height:1.15;
+      font-weight:800;
+      color:#fff;
+      margin:0 0 10px;
+    }
+    .rp-title{
+      font-size:1.02rem;
+      color:#bfe8ff;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+    .rp-creds{
+      font-size:0.9rem;
+      color:rgba(255,255,255,0.72);
+      margin-bottom:18px;
+    }
+    .rp-summary{
+      max-width:800px;
+      color:rgba(255,255,255,0.95);
+      font-size:0.98rem;
+      margin-bottom:22px;
+    }
+    .rp-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .rp-link{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:9px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#fff;
+      background:rgba(255,255,255,0.10);
+      border:1px solid rgba(255,255,255,0.20);
+      font-size:0.85rem;
+      font-weight:700;
+      transition:0.2s ease;
+    }
+    .rp-link:hover{
+      background:rgba(255,255,255,0.18);
+      transform:translateY(-1px);
+    }
 
-    /* Patent card */
-    .patent-card{background:linear-gradient(135deg,#fff8e1,#fffde7);border:1px solid #ffd54f;border-radius:16px;padding:28px;margin-bottom:24px;display:flex;gap:20px;align-items:flex-start;}
-    .patent-icon{font-size:2.5rem;flex-shrink:0;}
-    .patent-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--p);margin-bottom:8px;line-height:1.4;}
-    .patent-meta{font-size:0.82rem;color:var(--m);margin-bottom:8px;}
-    .patent-badge{display:inline-block;background:#FF8F00;color:#fff;font-size:0.7rem;font-weight:700;padding:3px 12px;border-radius:50px;letter-spacing:0.05em;}
+    .rp-body{
+      padding:56px 24px 70px;
+    }
+    .rp-inner{
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .rp-section{
+      margin-bottom:58px;
+    }
+    .rp-section-title{
+      font-family:'Playfair Display',serif;
+      font-size:1.7rem;
+      font-weight:700;
+      color:var(--rp-primary);
+      margin:0 0 18px;
+      padding-bottom:12px;
+      border-bottom:2px solid var(--rp-border);
+    }
 
-    /* Research cards */
-    .research-grid{display:flex;flex-direction:column;gap:16px;}
-    .research-card{background:#fff;border:1px solid var(--b);border-radius:12px;padding:24px;transition:0.2s;position:relative;}
-    .research-card:hover{box-shadow:var(--sm);border-color:rgba(0,180,216,0.3);}
-    .research-num{position:absolute;top:20px;right:20px;font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--b);line-height:1;}
-    .research-title{font-size:0.95rem;font-weight:700;color:var(--p);margin-bottom:8px;line-height:1.4;padding-right:40px;}
-    .research-authors{font-size:0.8rem;color:var(--hc);font-weight:600;margin-bottom:6px;}
-    .research-venue{font-size:0.78rem;color:var(--m);font-style:italic;}
-    .research-status{display:inline-block;margin-top:8px;font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:0.05em;}
-    .status-review{background:#E3F2FD;color:#1565C0;}
-    .status-prep{background:#F3E5F5;color:#6A1B9A;}
-    .status-pub{background:#E8F5E9;color:#2E7D32;}
+    .rp-about{
+      background:var(--rp-card);
+      border:1px solid var(--rp-border);
+      border-radius:18px;
+      padding:26px;
+      box-shadow:var(--rp-shadow-sm);
+    }
 
-    /* Journal cards */
-    .journal-grid{display:flex;flex-direction:column;gap:12px;}
-    .journal-card{background:#fff;border:1px solid var(--b);border-radius:10px;padding:20px 24px;transition:0.2s;}
-    .journal-card:hover{box-shadow:var(--ss);border-color:rgba(0,212,170,0.3);}
-    .journal-title{font-size:0.9rem;font-weight:700;color:var(--p);margin-bottom:6px;line-height:1.4;}
-    .journal-authors{font-size:0.78rem;color:var(--m);margin-bottom:4px;}
-    .journal-venue{font-size:0.78rem;color:var(--a);font-weight:600;}
-    .journal-year{font-size:0.72rem;color:var(--m);}
+    .rp-interests{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:6px;
+    }
+    .rp-interest{
+      background:rgba(0,180,216,0.10);
+      color:#0e6280;
+      border:1px solid rgba(0,180,216,0.18);
+      font-size:0.84rem;
+      font-weight:600;
+      padding:7px 15px;
+      border-radius:999px;
+    }
 
-    .conf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
-    .conf-card{background:#fff;border:1px solid var(--b);border-radius:10px;padding:20px;text-align:center;}
-    .conf-icon{font-size:1.8rem;margin-bottom:8px;}
-    .conf-title{font-size:0.88rem;font-weight:700;color:var(--p);line-height:1.3;}
-    .conf-year{font-size:0.75rem;color:var(--m);margin-top:4px;}
+    .patent-card{
+      background:linear-gradient(135deg,#fff8e1,#fffef2);
+      border:1px solid #f3d26a;
+      border-radius:18px;
+      padding:28px;
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      box-shadow:var(--rp-shadow-sm);
+    }
+    .patent-icon{
+      font-size:2.2rem;
+      flex-shrink:0;
+    }
+    .patent-title{
+      font-family:'Playfair Display',serif;
+      font-size:1.1rem;
+      font-weight:700;
+      color:var(--rp-primary);
+      margin-bottom:8px;
+    }
+    .patent-meta{
+      font-size:0.9rem;
+      color:#5b6472;
+      margin-bottom:6px;
+    }
+    .patent-badge{
+      display:inline-block;
+      margin-top:6px;
+      background:#ff9800;
+      color:#fff;
+      font-size:0.72rem;
+      font-weight:800;
+      padding:5px 12px;
+      border-radius:999px;
+      letter-spacing:0.04em;
+    }
 
-    @media(max-width:768px){
-      .rp-hero-inner{grid-template-columns:1fr;text-align:center;}
-      .rp-photo,.rp-photo-placeholder{margin:0 auto;}
-      .rp-links{justify-content:center;}
+    .research-grid, .journal-grid{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .research-card, .journal-card{
+      background:var(--rp-card);
+      border:1px solid var(--rp-border);
+      border-radius:16px;
+      padding:22px 24px;
+      box-shadow:var(--rp-shadow-sm);
+      position:relative;
+    }
+    .research-card:hover, .journal-card:hover{
+      border-color:#b8d8ef;
+      box-shadow:var(--rp-shadow);
+    }
+    .research-num{
+      position:absolute;
+      top:16px;
+      right:18px;
+      font-family:'Playfair Display',serif;
+      font-size:1.9rem;
+      font-weight:800;
+      color:#d8e6f2;
+      line-height:1;
+    }
+    .research-title, .journal-title{
+      font-size:0.98rem;
+      font-weight:800;
+      color:var(--rp-primary);
+      line-height:1.45;
+      padding-right:42px;
+      margin-bottom:8px;
+    }
+    .research-authors, .journal-authors{
+      font-size:0.84rem;
+      color:#0d6c8c;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+    .research-venue, .journal-venue{
+      font-size:0.83rem;
+      color:var(--rp-muted);
+      font-style:italic;
+    }
+    .research-status{
+      display:inline-block;
+      margin-top:10px;
+      font-size:0.7rem;
+      font-weight:800;
+      letter-spacing:0.05em;
+      padding:5px 11px;
+      border-radius:999px;
+    }
+    .status-review{background:#e3f2fd;color:#1565c0;}
+    .status-submitted{background:#fff3e0;color:#e65100;}
+    .status-prep{background:#f3e5f5;color:#6a1b9a;}
+    .status-pub{background:#e8f5e9;color:#2e7d32;}
+
+    .conf-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .conf-card{
+      background:var(--rp-card);
+      border:1px solid var(--rp-border);
+      border-radius:16px;
+      padding:22px;
+      text-align:center;
+      box-shadow:var(--rp-shadow-sm);
+    }
+    .conf-icon{
+      font-size:1.8rem;
+      margin-bottom:8px;
+    }
+    .conf-title{
+      font-size:0.9rem;
+      font-weight:800;
+      color:var(--rp-primary);
+      line-height:1.4;
+    }
+    .conf-year{
+      font-size:0.8rem;
+      color:var(--rp-muted);
+      margin-top:6px;
+    }
+
+    .footer{
+      text-align:center;
+      background:var(--rp-primary);
+      color:#fff;
+      padding:22px 16px;
+      font-size:0.9rem;
+      margin-top:30px;
+    }
+
+    @media (max-width: 768px){
+      .rp-hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+      .rp-photo, .rp-photo-placeholder{
+        margin:0 auto;
+      }
+      .rp-links{
+        justify-content:center;
+      }
+      .research-title, .journal-title{
+        padding-right:0;
+      }
+      .research-num{
+        position:static;
+        display:block;
+        margin-bottom:10px;
+      }
+      .patent-card{
+        flex-direction:column;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav scrolled" style="box-shadow:var(--sm)">
+  <nav class="nav">
     <div class="ni">
-      <a href="index.html" class="nl" style="text-decoration:none">QualfyTech</a>
-      <div class="nr" style="margin-left:auto">
-        <a href="index.html" class="nk" style="text-decoration:none">← Back to Home</a>
-        <a href="index.html#contact" class="nk" style="text-decoration:none;background:var(--hc);color:#fff;padding:8px 20px;border-radius:50px;font-weight:700">Enrol Now</a>
+      <a href="index.html" class="nl" style="text-decoration:none;">Home</a>
+      <div class="nr">
+        <a href="index.html" class="nk">← Back to Main Site</a>
+        <a href="index.html#contact" class="nk cta">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <div class="rp-hero">
     <div class="rp-hero-inner">
       <div>
-        <img src="ponraj.jpg" alt="Dr. Ponraj Asirwadam Paulraj" class="rp-photo" onerror="this.style.display='none';document.getElementById('pp-avatar').style.display='flex'" />
-        <div class="rp-photo-placeholder" id="pp-avatar" style="display:none">PP</div>
+        <img src="ponraj.jpg" alt="Dr. Ponraj Asirwadam Paulraj" class="rp-photo"
+             onerror="this.style.display='none';document.getElementById('pp-avatar').style.display='flex';" />
+        <div class="rp-photo-placeholder" id="pp-avatar">PP</div>
       </div>
+
       <div>
         <div class="rp-name">Dr. Ponraj Asirwadam Paulraj</div>
-        <div class="rp-title">PhD in Mathematics | AI & Topology Researcher</div>
-        <div class="rp-creds">PhD · Anna University · SMIEEE affiliate · QualfyTech Instructor</div>
+        <div class="rp-title">PhD in Mathematics | AI &amp; Topology Researcher | Financial &amp; Investment Testing Professional</div>
+        <div class="rp-creds">PhD · Anna University · Aadya IT Limited, United Kingdom</div>
+
+        <div class="rp-summary">
+          PhD mathematician and researcher working at the intersection of generalized topology,
+          topological data analysis, uncertainty-aware AI, and healthcare intelligence.
+          Alongside ongoing research in topology-driven AI systems, he is professionally engaged
+          in financial and investment systems testing, software validation, and quality assurance
+          in the United Kingdom.
+        </div>
+
         <div class="rp-links">
           <a href="https://scholar.google.com" target="_blank" class="rp-link">🎓 Google Scholar</a>
           <a href="https://www.researchgate.net" target="_blank" class="rp-link">🔬 ResearchGate</a>
+          <a href="https://www.linkedin.com/in/ponraj-asirwadam-paulraj-0a0a86287/" target="_blank" class="rp-link">💼 LinkedIn</a>
           <a href="mailto:pejuponraj@gmail.com" class="rp-link">✉️ Email</a>
-          <a href="index.html#instructor" class="rp-link">🌐 QualfyTech Profile</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- BODY -->
   <div class="rp-body">
     <div class="rp-inner">
 
-      <!-- RESEARCH INTERESTS -->
+      <div class="rp-section">
+        <h2 class="rp-section-title">Profile Summary</h2>
+        <div class="rp-about">
+          Dr. Ponraj Asirwadam Paulraj is a mathematician with research interests spanning generalized
+          topological spaces, bitopology, H-hyperconnected structures, neutrosophic systems, stability theory,
+          topological data analysis, multi-agent systems, AI in healthcare, and robust decision-making frameworks.
+          His recent work focuses on connecting rigorous mathematical structures with real-world AI applications,
+          particularly in healthcare, navigation, genomic data analysis, and intelligent risk modelling.
+        </div>
+      </div>
+
       <div class="rp-section">
         <h2 class="rp-section-title">Research Interests</h2>
         <div class="rp-interests">
@@ -128,23 +451,23 @@
         </div>
       </div>
 
-      <!-- PATENT -->
       <div class="rp-section">
         <h2 class="rp-section-title">🏅 Patent</h2>
         <div class="patent-card">
           <div class="patent-icon">⚗️</div>
           <div>
-            <div class="patent-title">Computer-Implemented System for Topology-Guided Hereditary Noise Filtering in DNA Genotype Data and AI-Assisted Physiological Readiness Assessment</div>
+            <div class="patent-title">
+              Computer-Implemented System for Topology-Guided Hereditary Noise Filtering in DNA Genotype Data and AI-Assisted Physiological Readiness Assessment
+            </div>
             <div class="patent-meta">Inventors: Ponraj Asirwadam Paulraj &amp; Sateesh Vidhyanadhan</div>
             <div class="patent-meta"><strong>Patent No:</strong> GB2606061.6</div>
-            <span class="patent-badge">⏳ Under Review</span>
+            <span class="patent-badge">UNDER REVIEW</span>
           </div>
         </div>
       </div>
 
-      <!-- RECENT RESEARCH -->
       <div class="rp-section">
-        <h2 class="rp-section-title">📄 Recent Research Works (2025–2026)</h2>
+        <h2 class="rp-section-title">📄 Current Research — Under Review / Submitted</h2>
         <div class="research-grid">
 
           <div class="research-card">
@@ -152,109 +475,123 @@
             <div class="research-title">Topology-Guided Hereditary Noise Filtering in DNA Genotype Data and AI-Assisted Physiological Readiness Assessment</div>
             <div class="research-authors">Ponraj, A. P. &amp; Sateesh V.</div>
             <div class="research-venue">Scientific Reports (Nature Portfolio)</div>
-            <span class="research-status status-review">Under Review — 2026</span>
+            <span class="research-status status-review">UNDER REVIEW · 2026</span>
           </div>
 
           <div class="research-card">
             <div class="research-num">02</div>
-            <div class="research-title">Robust Health Monitoring via AI Agents and Generalized Topological Data Analysis</div>
-            <div class="research-authors">Ponraj, A. P., Muthu Ramachandran &amp; Hari Friedrich Schuth</div>
-            <div class="research-venue">Manuscript in preparation / Conference submission (AIBH 2026)</div>
-            <span class="research-status status-prep">In Preparation — 2026</span>
+            <div class="research-title">Uncertainty-Aware AI Decision Framework based on Neutrosophic Mixed b-Open Topology</div>
+            <div class="research-authors">Al-Omeri, W. &amp; Ponraj, A. P.</div>
+            <div class="research-venue">Soft Computing (Springer Nature)</div>
+            <span class="research-status status-review">UNDER REVIEW · 2026</span>
           </div>
 
           <div class="research-card">
             <div class="research-num">03</div>
-            <div class="research-title">Uncertainty-Aware AI Decision Framework based on Neutrosophic Mixed b-Open Topology</div>
+            <div class="research-title">H-Almost e-I-Continuous Mappings in Ideal Generalized Topological Spaces</div>
             <div class="research-authors">Al-Omeri, W. &amp; Ponraj, A. P.</div>
-            <div class="research-venue">Soft Computing (Springer Nature)</div>
-            <span class="research-status status-review">Under Review — 2026</span>
+            <div class="research-venue">Computational and Applied Mathematics</div>
+            <span class="research-status status-review">UNDER REVIEW · 2026</span>
           </div>
 
           <div class="research-card">
             <div class="research-num">04</div>
-            <div class="research-title">H-Almost e-I-Continuous Mappings in Ideal Generalized Topological Spaces</div>
-            <div class="research-authors">Al-Omeri, W. &amp; Ponraj, A. P.</div>
-            <div class="research-venue">Computational and Applied Mathematics</div>
-            <span class="research-status status-review">Under Review — 2026</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">05</div>
-            <div class="research-title">Network Topology-Based Diabetic Risk Prediction</div>
-            <div class="research-authors">Ponraj, A. P. &amp; Muthu Ramachandran</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">06</div>
-            <div class="research-title">Navigation of Autonomous Agents in H-Hyperconnected State Spaces: A Topological Approach to Robust Decision Making</div>
-            <div class="research-authors">Ponraj, A. P. &amp; Paul Danny Anandan</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">07</div>
-            <div class="research-title">Topology-Preserving Collective Navigation in H-Hyperconnected Multi-Agent Systems under Hereditary Noise</div>
+            <div class="research-title">Topology-Guided Privacy-Preserving Cardiovascular Risk Prediction via Persistent Homology and H-Hyperconnected Structures</div>
             <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">08</div>
-            <div class="research-title">Fixed Point Theorems for Φ, Ψ-Weak Contractions in Neutrosophic H-Hyperconnected Metric Spaces</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">09</div>
-            <div class="research-title">AI-Driven Drug Discovery through Generalized Topological Molecular Spaces</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">10</div>
-            <div class="research-title">Topology-Guided Hereditary Noise Filtering in Data and AI Systems with Connectivity Preservation</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">11</div>
-            <div class="research-title">H-Stable Structures in Bitopological Spaces with a Risk Mapping</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">12</div>
-            <div class="research-title">Topology-Guided Noise-Resilient Financial Risk Modelling in Banking Systems Using H-Hyperconnected Generalized Topological Spaces</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
-          </div>
-
-          <div class="research-card">
-            <div class="research-num">13</div>
-            <div class="research-title">Generalized Topological Foundations for Sparse Graph Neural Networks in Language Modelling</div>
-            <div class="research-authors">Ponraj, A. P.</div>
-            <div class="research-venue">Manuscript in preparation</div>
-            <span class="research-status status-prep">In Preparation</span>
+            <div class="research-venue">Applied Soft Computing</div>
+            <span class="research-status status-submitted">SUBMITTED · 2026</span>
           </div>
 
         </div>
       </div>
 
-      <!-- JOURNAL PUBLICATIONS -->
+      <div class="rp-section">
+        <h2 class="rp-section-title">🧠 Manuscripts in Preparation</h2>
+        <div class="research-grid">
+
+          <div class="research-card">
+            <div class="research-num">05</div>
+            <div class="research-title">Robust Health Monitoring via AI Agents and Generalized Topological Data Analysis</div>
+            <div class="research-authors">Ponraj, A. P., Muthu Ramachandran &amp; Hari Friedrich Schuth</div>
+            <div class="research-venue">Manuscript in preparation / Conference submission</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">06</div>
+            <div class="research-title">Network Topology-Based Diabetic Risk Prediction</div>
+            <div class="research-authors">Ponraj, A. P. &amp; Muthu Ramachandran</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">07</div>
+            <div class="research-title">Navigation of Autonomous Agents in H-Hyperconnected State Spaces: A Topological Approach to Robust Decision Making</div>
+            <div class="research-authors">Ponraj, A. P. &amp; Paul Danny Anandan</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">08</div>
+            <div class="research-title">Topology-Preserving Collective Navigation in H-Hyperconnected Multi-Agent Systems under Hereditary Noise</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">09</div>
+            <div class="research-title">Fixed Point Theorems for Φ, Ψ-Weak Contractions in Neutrosophic H-Hyperconnected Metric Spaces</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">10</div>
+            <div class="research-title">AI-Driven Drug Discovery through Generalized Topological Molecular Spaces</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">11</div>
+            <div class="research-title">Topology-Guided Hereditary Noise Filtering in Data and AI Systems with Connectivity Preservation</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">12</div>
+            <div class="research-title">H-Stable Structures in Bitopological Spaces with a Risk Mapping</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">13</div>
+            <div class="research-title">Topology-Guided Noise-Resilient Financial Risk Modelling in Banking Systems Using H-Hyperconnected Generalized Topological Spaces</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+          <div class="research-card">
+            <div class="research-num">14</div>
+            <div class="research-title">Generalized Topological Foundations for Sparse Graph Neural Networks in Language Modelling</div>
+            <div class="research-authors">Ponraj, A. P.</div>
+            <div class="research-venue">Manuscript in preparation</div>
+            <span class="research-status status-prep">IN PREPARATION</span>
+          </div>
+
+        </div>
+      </div>
+
       <div class="rp-section">
         <h2 class="rp-section-title">📚 Journal Publications</h2>
         <div class="journal-grid">
@@ -262,77 +599,76 @@
           <div class="journal-card">
             <div class="journal-title">On Closed Sets</div>
             <div class="journal-authors">Ponraj, A. P. &amp; Elavarasan, P.</div>
-            <div class="journal-venue">Design Engineering</div>
-            <div class="journal-year">2021 · pp. 10994–10997</div>
+            <div class="journal-venue">Design Engineering · 2021 · pp. 10994–10997</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">On Nowhere *-Dense Subsets of an Ideal Topological Space</div>
             <div class="journal-authors">Ponraj, A. P. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">Bulletin of the Allahabad Mathematical Society</div>
-            <div class="journal-year">2015 · pp. 201–210</div>
+            <div class="journal-venue">Bulletin of the Allahabad Mathematical Society · 2015 · pp. 201–210</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">On H-µ Baire Space</div>
             <div class="journal-authors">Ponraj, A. P. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">Asian Journal of Research in Social Sciences and Humanities</div>
-            <div class="journal-year">2017 · pp. 615–623</div>
+            <div class="journal-venue">Asian Journal of Research in Social Sciences and Humanities · 2017 · pp. 615–623</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">I-µ Open Sets in Generalised Topological Space</div>
             <div class="journal-authors">Ponraj, A. P. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">Advances in Natural and Applied Sciences</div>
-            <div class="journal-year">2017 · pp. 351–356</div>
+            <div class="journal-venue">Advances in Natural and Applied Sciences · 2017 · pp. 351–356</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">Weakly Semi-H-Open Sets and Almost Strong H-κ Open Sets</div>
             <div class="journal-authors">Ponraj, A. P., Shankar, R. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">International Journal of Pure and Applied Mathematics</div>
-            <div class="journal-year">2017 · pp. 7–13</div>
+            <div class="journal-venue">International Journal of Pure and Applied Mathematics · 2017 · pp. 7–13</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">Semi*-H-Open Sets</div>
             <div class="journal-authors">Ponraj, A. P. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">International Journal of Pure and Applied Mathematics</div>
-            <div class="journal-year">2017 · pp. 1–6</div>
+            <div class="journal-venue">International Journal of Pure and Applied Mathematics · 2017 · pp. 1–6</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">AHR-Sets in Generalized Topological Spaces</div>
             <div class="journal-authors">Ponraj, A. P., Shankar, R. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">International Journal of Pure and Applied Mathematics</div>
-            <div class="journal-year">2018 · pp. 2165–2170</div>
+            <div class="journal-venue">International Journal of Pure and Applied Mathematics · 2018 · pp. 2165–2170</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">HR-Closed Sets in Generalized Topological Spaces</div>
             <div class="journal-authors">Ponraj, A. P., Shankar, R. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">International Journal of Pure and Applied Mathematics</div>
-            <div class="journal-year">2018 · pp. 2153–2158</div>
+            <div class="journal-venue">International Journal of Pure and Applied Mathematics · 2018 · pp. 2153–2158</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">Soft SWG-Separation Axioms in Soft Topological Spaces</div>
             <div class="journal-authors">Ponraj, A. P., Sasikala, V. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">Journal of Applied Science and Computations</div>
-            <div class="journal-year">2019 · pp. 2236–2245</div>
+            <div class="journal-venue">Journal of Applied Science and Computations · 2019 · pp. 2236–2245</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
           <div class="journal-card">
             <div class="journal-title">On Soft Semi Weakly Generalized Closed Sets in Soft Topological Spaces</div>
             <div class="journal-authors">Ponraj, A. P., Sasikala, V. &amp; Sivaraj, D.</div>
-            <div class="journal-venue">International Journal of Innovative Technology and Exploring Engineering</div>
-            <div class="journal-year">2019 · pp. 1252–1256</div>
+            <div class="journal-venue">International Journal of Innovative Technology and Exploring Engineering · 2019 · pp. 1252–1256</div>
+            <span class="research-status status-pub">PUBLISHED</span>
           </div>
 
         </div>
       </div>
 
-      <!-- CONFERENCES -->
       <div class="rp-section">
         <h2 class="rp-section-title">🎤 Conferences &amp; Workshops</h2>
         <div class="conf-grid">
@@ -357,7 +693,7 @@
     </div>
   </div>
 
-  <footer class="footer">© 2026 Forti5 Technologies Ltd. All rights reserved.</footer>
+  <footer class="footer">© 2026 Dr. Ponraj Asirwadam Paulraj. All rights reserved.</footer>
 
 </body>
 </html>
